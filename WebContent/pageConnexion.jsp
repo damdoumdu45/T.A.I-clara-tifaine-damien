@@ -9,5 +9,6 @@
 </head>
 <body>
 <p> Page de connexion au serveur de l'entreprise hoffgevouet </p>
+<img src="/image/logo.png" alt=... width="256" height="128" /> 
 </body>
 </html>
