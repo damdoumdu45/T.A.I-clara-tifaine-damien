@@ -7,6 +7,6 @@
 <title> Hoffgevouet</title>
 </head>
 <body>
-<p> Page de connexion au serveur de l'entreprise hoffgevouet cool</p>
+<p> Page de connexion au serveur de l'entreprise hoffgevouet coolraoul</p>
 </body>
 </html>
