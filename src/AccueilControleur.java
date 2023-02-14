@@ -17,7 +17,7 @@ public class AccueilControleur extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AccueilControleurssss() {
+    public AccueilControleur() {
         super();
         // TODO Auto-generated constructor stub
     }
