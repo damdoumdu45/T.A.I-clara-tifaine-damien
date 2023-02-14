@@ -8,7 +8,6 @@
 <title> Hoffgevouet</title>
 </head>
 <body>
-<p> Page Connexion</p>
-<figure> </figure>
+<p> Page de connexion au serveur de l'entreprise hoffgevouet </p>
 </body>
 </html>
