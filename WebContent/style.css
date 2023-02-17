@@ -106,6 +106,7 @@
     opacity: 0;
     transition: all 0.1s;
     background: #232323;
+    z-index:10;
 }
 .subnav li {
     float: none;
@@ -117,4 +118,23 @@
     visibility: visible;
     top: 100%;
     opacity: 1;
+}
+
+
+.analytics {
+	margin: 1rem;
+	display: grid;
+	grid-template-columns: 64% auto;
+	grid-gap: 2rem;
+}
+
+.card {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	padding: 1rem;
+}
+
+body{
+	background:#c0c0c0;
 }

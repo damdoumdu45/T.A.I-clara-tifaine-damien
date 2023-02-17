@@ -47,5 +47,41 @@
 
 <script src="prefixfree-1.0.7.js" type="text/javascript"></script>
 
+
+<div class="analytics">
+	<div class="card engage-card">
+		<div class="card-head">
+		</div>
+		<div class="card-body">
+			<div id="chart"></div>
+		</div>
+		<div class="card emails-card"></div>
+	</div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script>
+let options = {
+		chart: {
+			type: 'line'
+		},
+		stroke: {
+			curve: 'smooth',
+			width: 8,
+			colors: ["#6E00FF"]
+		},
+		series: [{
+			name: 'ventes',
+			data: [5,3,10,8,29,19,22,13,20,15,19,24]
+		}],
+		xaxis: {
+			categories: ["Janvier","Fevrier","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"]
+		}
+}
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+</script>
+
 </body>
 </html>
