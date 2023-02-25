@@ -50,15 +50,25 @@
 
 <div class="analytics">
 	<div class="card engage-card">
-		<div class="card-head">
+		<div class="titre1">
+			Profit 
 		</div>
 		<div class="card-body">
 			<div id="chart"></div>
 		</div>
-		<div class="card emails-card"></div>
+	</div>
+	<div class="card emails-card">
+	<div class="titre2">
+			Pourcentage de place disponible dans le stock
+		</div>
+	<div class="card emails-card">
+			<div id="emailChart"></div>
+		</div>
+		<div class = "logo">
+				<p style="text-align:center"><img src="logo.png" width="225px"></p>
+			</div>
 	</div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
@@ -81,7 +91,44 @@ let options = {
 }
 var chart = new ApexCharts(document.querySelector("#chart"), options);
 chart.render();
-</script>
 
+let optionsRadial = {
+        series: [74],
+        chart: {
+        height: 280,
+        type: 'radialBar',
+      },
+      plotOptions: {
+        radialBar: {
+          hollow: {
+            size: '50%',
+          },
+      	dataLabels:{
+      		name : {
+      			show: false,
+      			},
+          value: {
+              formatter: function(val) {
+                return parseInt(val);
+              },
+              color: '#111',
+              fontSize: '36px',
+              show: true,
+            }
+      		}
+        },
+      },
+      stroke: {
+      	lineCap: "round",
+      },
+      	fill:{
+      	colors: ["#6E00FF"],
+      	}
+      };
+
+      let chartRadial = new ApexCharts(document.querySelector("#emailChart"), optionsRadial);
+      chartRadial.render();
+      
+</script>
 </body>
 </html>
