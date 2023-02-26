@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 	
 <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
@@ -10,7 +9,20 @@
 <title> Hoffgevouet</title>
 </head>
 <body>
-<p> Page de connexion au serveur de l'entreprise hoffgevouet </p>
-<img src="/image/logo.png" alt=... width="256" height="128" /> 
+<h2>Connexion</h2>
+<form action="MembreControleur" method="post">
+mail : <input type="text" name="mail" /> <br />
+mdp : <input type="text" name="mdp" /> <br />
+<input type="submit" />
+</form>
+
+<h3>Ajouter un nouvel employe</h3>
+<form action="MembreControleur" method="post">
+nom : <input type="text" name="nom" /> <br />
+prenom : <input type="text" name="prenom" /> <br />
+mail : <input type="text" name="mail" /> <br />
+mdp : <input type="text" name="mdp" /> <br />
+<input type="submit" />
+</form>
 </body>
 </html>
