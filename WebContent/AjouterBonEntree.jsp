@@ -11,29 +11,42 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Ajouter un bon d'entrée</title>
 
-<link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="AjouterBonEntree.css">
+<link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="ajouterBonEntree.css">
 
 </head>
 <body>
 
 
-<button onclick="window.location.href = 'https://fr.w3docs.com/';">Accueil</button>
-
-
-<nav>
-	<ul>
-		<li><a href="">Ajout</a></li>
-		<li><a href="">Inventaire</a></li>
-		<li><a href="">Calendrier</a></li>
-		<li><a href="">Parametre</a></li>
-		<li><a href="">?</a></li>
-	</ul>
-	
-	<form>
-	<input type="search" name="q" placeholder="Rechercher un article">
-	<input type="submit" value="Rechercher">
-	</form>
-</nav>
+<ul class="nav">
+	<li>
+        <a href="#">Accueil</a>
+    </li>
+    <li>
+        <a href="#">Ajout</a>
+    </li>
+    <li>
+        <a href="#">Inventaire</a>
+    </li>
+    <li id="options">
+        <a href="#">Calendrier</a>
+        <ul class="subnav">
+            <li><a href="#">Calendrier des inventaires</a></li>
+            <li><a href="#">Historique des entrées/sorties</a></li>
+        </ul>
+    </li>
+    <li id="search">
+        <form action="" method="get">
+            <input type="text" name="search_text" id="search_text" placeholder="Rechercher un article"/>
+            <input type="button" name="search_button" id="search_button"></a>
+        </form>
+    </li>
+    <li id="settings">
+        <a href="#"><img src="settings.png" /></a>
+    </li>
+    <li id="settings">
+        <a href="#"><img src="bell1.png" /></a>
+    </li>
+</ul>
 
 <table>
 	<tr>
