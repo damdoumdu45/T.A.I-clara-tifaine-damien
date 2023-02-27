@@ -1,40 +1,37 @@
+var currentDate = new Date();
+var currentMonth = currentDate.getMonth();
+var currentYear = currentDate.getFullYear();
 
+public class Calendrier {
 
-import java.io.IOException;
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+	function fillCalendar(month, year) {
+		  var firstDay = new Date(year, month, 1).getDay();
+		  var lastDate = new Date(year, month + 1, 0).getDate();
+		  var tableBody = document.querySelector('.calendar tbody');
+		  tableBody.innerHTML = '';
+		  var date = 1;
+		  for (var i = 0; i < 6; i++) {
+		    var row = document.createElement('tr');
+		    for (var j = 0; j < 7; j++) {
+		      var cell = document.createElement('td');
+		      if (i === 0 && j < firstDay) {
+		        var textNode = document.createTextNode('');
+		        cell.appendChild(textNode);
+		      } else if (date > lastDate) {
+		        break;
+		      } else {
+		        var textNode = document.createTextNode(date);
+		        cell.appendChild(textNode);
+		        date++;
+		      }
+		      row.appendChild(cell);
+		    }
+		    tableBody.appendChild(row);
+		  }
+		  var monthYearText = document.querySelector('.month-year');
+		  var months = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+		  monthYearText.textContent = months[month] + ' ' + year;
+		}
 
-/**
- * Servlet implementation class Calendrier
- */
-@WebServlet("/Calendrier")
-public class Calendrier extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-    /**
-     * Default constructor. 
-     */
-    public Calendrier() {
-        // TODO Auto-generated constructor stub
-    }
-
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-	}
-
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
-
+		fillCalendar(currentMonth, currentYear);
 }

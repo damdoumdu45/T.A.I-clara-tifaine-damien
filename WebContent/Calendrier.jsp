@@ -8,7 +8,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Calendrier</title>
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="styleCalendrier.css" />
+<script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <ul class="nav">
@@ -25,7 +26,7 @@
         <a href="#">Calendrier</a>
         <ul class="subnav">
             <li><a href="#" onclick="window.location.href='Calendrier.jsp'" >Calendrier des inventaires</a></li>
-            <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
+            <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrÃ©es/sorties</a></li>
         </ul>
     </li>
     <li id="search">
@@ -41,6 +42,85 @@
         <a href="#"><img src="bell1.png" /></a>
     </li>
 </ul>
+
+
+	<section id="cld">
+                <section id="enteteCld">
+                    <h1 id="cldT">JANVIER</h1>
+                    <section id="avantEtApres">
+                    <button id="avant" class="cldBtn"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button id="apres" class="cldBtn"style="margin-left: 20%"><i class="fa-solid fa-arrow-right"></i></button></section>
+                </section>
+            
+
+            <section id="cldBoite">
+                <div id="jours">
+                    <div class="jour">lun</div>
+                    <div class="jour">mar</div>
+                    <div class="jour">mer</div>
+                    <div class="jour">jeu</div>                 
+                    <div class="jour">ven</div>
+                    <div class="jour">sam</div>
+                    <div class="jour">dim</div>
+                </div>
+
+                <div id="semaine1" class="semaine">
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                </div>
+                <div id="semaine2" class="semaine">
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                </div>
+                <div id="semaine3" class="semaine">
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                </div>
+                <div id="semaine4" class="semaine">
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                </div>
+                <div id="semaine5" class="semaine">
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                </div>
+                <div id="semaine6" class="semaine">
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                    <div class="case"></div>
+                </div>
+
+            </section>
+        </section>
 
 </body>
 </html>

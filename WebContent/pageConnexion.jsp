@@ -12,6 +12,7 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+<div class="analytics">
 <div class="card emails-card">
 
 <h2 style="text-align:center">Connexion</h2>
@@ -26,6 +27,6 @@
 
 
 <button class="btn-round" onclick="window.location.href='AjoutEmploye.jsp'"><span>+</span></button>
-</div>
+</div></div>
 </body>
 </html>
