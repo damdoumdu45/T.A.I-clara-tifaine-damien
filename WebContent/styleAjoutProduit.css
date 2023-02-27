@@ -1,3 +1,4 @@
+@charset "ISO-8859-1";
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 * {
@@ -160,3 +161,38 @@ body{
   margin-left: 2px;
 }
 
+.container{
+  border: 1px white; /* bordure noire d'une épaisseur de 1 pixel */
+  padding: 10px; /* ajout d'un espace intérieur pour éviter que le texte ne touche la bordure */
+  background-color: white;
+  margin-top: 30px;
+}
+
+
+.cdd{
+	text-align : right;
+	margin-right :60px;
+}
+
+.dpt{
+	text-align : left;
+	margin-top : -20px;
+	margin-right :60px;
+}
+
+.dtcrea{
+	text-align : right ; 
+	margin-right :60px;
+	
+}
+
+.regle{
+	text-align : left;
+	margin-top : -20px;
+	margin-right :60px;
+}
+
+.btt{
+	text-align : right;
+	margin-right :60px;
+}

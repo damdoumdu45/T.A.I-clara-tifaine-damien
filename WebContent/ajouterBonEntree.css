@@ -140,3 +140,38 @@
 body{
 	background:#c0c0c0;
 }
+
+table{
+	border-collapse : collapse;
+}
+
+
+.container{
+  border: 1px white; /* bordure noire d'une épaisseur de 1 pixel */
+  padding: 10px; /* ajout d'un espace intérieur pour éviter que le texte ne touche la bordure */
+  background-color: white;
+  margin-top: 30px;
+}
+
+
+.cdd{
+	text-align : right;
+}
+
+.qtt{
+	text-align : center;
+	margin-top : -20px;
+}
+
+.dtcrea{
+	text-align : left;
+	margin-top : -20px;
+}
+
+.btt{
+	text-align : right;
+	margin-right :60px;
+	margin-top : 20px;
+    
+}
+

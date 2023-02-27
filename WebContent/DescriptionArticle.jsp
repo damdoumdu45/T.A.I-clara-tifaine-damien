@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Ajouter un produit</title>
+<title>Description article</title>
 <link rel="stylesheet" type="text/css" href="styleAjoutProduit.css" />
 </head>
 <body>
@@ -72,8 +72,5 @@
     	</div>
 	</form>
 </div>
-
-
-
 </body>
 </html>

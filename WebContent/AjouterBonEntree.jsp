@@ -16,22 +16,21 @@
 </head>
 <body>
 
-
 <ul class="nav">
 	<li>
-        <a href="#">Accueil</a>
+        <a href="#" onclick="window.location.href='Accueil.jsp'">Accueil</a>
     </li>
     <li>
-        <a href="#">Ajout</a>
+        <a href="#" onclick="window.location.href='AjoutProduit.jsp'">Ajout</a>
     </li>
     <li>
-        <a href="#">Inventaire</a>
+        <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>
     </li>
     <li id="options">
         <a href="#">Calendrier</a>
         <ul class="subnav">
-            <li><a href="#">Calendrier des inventaires</a></li>
-            <li><a href="#">Historique des entrées/sorties</a></li>
+            <li><a href="#" onclick="window.location.href='Calendrier.jsp'" >Calendrier des inventaires</a></li>
+            <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
         </ul>
     </li>
     <li id="search">
@@ -68,7 +67,29 @@
 	</tr>
 	</c:forEach>
 </table>
-	
+
+
+<div class="container">
+	<form action="sauvegarderDonnees" method="POST">
+		<div class="cdd">
+    	<label for="code_article">Code article :</label>
+    	<input type="text" id="code_article" name="code_article"><br>
+    	</div>
+    	
+    	<div class="qtt">
+    	<label for="quantite">Quantité :</label>
+    	<input type="text" id="quantite" name="quantite"><br>
+    	</div>
+    	
+    	<div class="dtcrea">
+    	<label for="date_entree">Date de l'entrée du produit :</label>
+    	<input type="text" id="date_entree" name="date_entree"><br>
+    	</div>
+    	
+    	<div class="btt">
+    	<input type="submit" value="Enregistrer et fermer">
+    	</div>
+	</form>
 
 </body>
 </html>
