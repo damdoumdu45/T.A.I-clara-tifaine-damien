@@ -8,44 +8,43 @@ import java.util.ArrayList;
 
 // DAO pour CRUD (create, read, update, delete)
 public class MembreDAOModele {
-    // read all    
 	public ArrayList<MembreBeanModele> lireListe()
-    {
-        ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
-        Connection connexion = connexionBDDModele.getConnexion();
-        ArrayList<MembreBeanModele> listeMembre = new ArrayList<MembreBeanModele>();
-        try        
-        {
-            String requete = new String("SELECT id, nom, mail, mdp FROM membre;");
-            Statement statement = connexion.createStatement();
-            ResultSet rs = statement.executeQuery(requete);
-            while ( rs.next() )
-            {
-                MembreBeanModele membre = new MembreBeanModele();
-                membre.setId(rs.getInt("id"));
-                membre.setNom(rs.getString("nom"));
-                membre.setPrenom(rs.getString("prenom"));
-                membre.setMail(rs.getString("mail"));
-                membre.setMdp(rs.getString("mdp"));
-                listeMembre.add(membre);
-            }
-        }
-        catch (SQLException ex3)
-        {
-            while (ex3 != null)
-            {
-                System.out.println(ex3.getSQLState());
-                System.out.println(ex3.getMessage());
-                System.out.println(ex3.getErrorCode());
-                ex3=ex3.getNextException();
-            }
-        }
-        finally        {
-            connexionBDDModele.fermerConnexion();
-        }
-        return listeMembre;
-    }
-    // CRUD: obj = read(id)    
+	{
+		ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
+		Connection connexion = connexionBDDModele.getConnexion();
+		ArrayList<MembreBeanModele> listeMembre = new ArrayList<MembreBeanModele>();
+		try
+		{
+			String requete = new String("SELECT id, nom, prenom, mail, mdp FROM membre;");
+			Statement statement = connexion.createStatement();
+			ResultSet rs = statement.executeQuery(requete);
+			while ( rs.next() )
+			{
+				MembreBeanModele membre = new MembreBeanModele();
+				membre.setId(rs.getInt("id"));
+				membre.setNom(rs.getString("nom"));
+				membre.setPrenom(rs.getString("prenom"));
+				membre.setMail(rs.getString("mail"));
+				membre.setMdp(rs.getString("mdp"));
+				listeMembre.add(membre);
+			}
+		}
+		catch (SQLException ex3)
+		{
+			while (ex3 != null)
+			{
+				System.out.println(ex3.getSQLState());
+				System.out.println(ex3.getMessage());
+				System.out.println(ex3.getErrorCode());
+				ex3=ex3.getNextException();
+			}
+		}
+		finally
+		{
+			connexionBDDModele.fermerConnexion();
+		}
+		return listeMembre;
+	}  
     public MembreBeanModele lire(int id)
     {
         ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
@@ -85,7 +84,6 @@ public class MembreDAOModele {
         }
         return membre;
     }
-    // CRUD: create(obj)    
     public void creer(MembreBeanModele membre)
     {
         ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
@@ -115,11 +113,44 @@ public class MembreDAOModele {
             connexionBDDModele.fermerConnexion();
         }
     }
-    // CRUD: obj = read (mail,mdp)
     public int verifier(String mail, String mdp)
-    {
-        // fonction à remplir : vérifier l'existance de l'utilisateur/mdp, retourner soit son id, soit -1.
-    	return -1;
-    	}
+	{
+		ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
+		Connection connexion = connexionBDDModele.getConnexion();
+		
+		int id = -1;
+		try
+		{
+			String requete = new String("SELECT id, nom, prenom, mail, mdp FROM membre WHERE mail=? AND mdp=MD5(?);");
+			PreparedStatement statement = connexion.prepareStatement(requete,
+					Statement.RETURN_GENERATED_KEYS);
+			statement.setString(1, mail);
+			statement.setString(2, mdp);
+			ResultSet rs = statement.executeQuery();
+			if ( rs.next() )
+			{
+				id = rs.getInt("id");
+			}
+	
+		}
+		catch (SQLException ex3)
+		{
+			while (ex3 != null)
+			{
+				System.out.println("here");
+				System.out.println(ex3.getSQLState());
+				System.out.println(ex3.getMessage());
+				System.out.println(ex3.getErrorCode());
+				ex3=ex3.getNextException();
+			}
+		}
+		finally
+		{
+			connexionBDDModele.fermerConnexion();
+		}
+		return id;
+	}
+		
+}
     // CRUD: update(obj)    
     // CRUD: delete(obj)}
