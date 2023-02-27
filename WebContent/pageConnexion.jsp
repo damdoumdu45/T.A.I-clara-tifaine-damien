@@ -9,8 +9,11 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title> Hoffgevouet</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
+<div class="card emails-card">
+
 <h2 style="text-align:center">Connexion</h2>
 <div class = "logo">
 <p style="text-align:center"><img src="logo.png" width="225px"></p>
@@ -21,7 +24,8 @@
 <p><input type="submit" /></p>
 </form>
 
-<button class="btn-round"><span>+</span></button>
 
+<button class="btn-round" onclick="window.location.href='AjoutEmploye.jsp'"><span>+</span></button>
+</div>
 </body>
 </html>
