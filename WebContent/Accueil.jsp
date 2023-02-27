@@ -16,19 +16,19 @@
 
 <ul class="nav">
 	<li>
-        <a href="#">Accueil</a>
+        <a href="#" onclick="window.location.href='Accueil.jsp'">Accueil</a>
     </li>
     <li>
-        <a href="#">Ajout</a>
+        <a href="#" onclick="window.location.href='AjoutProduit.jsp'">Ajout</a>
     </li>
     <li>
-        <a href="#">Inventaire</a>
+        <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>
     </li>
     <li id="options">
         <a href="#">Calendrier</a>
         <ul class="subnav">
-            <li><a href="#">Calendrier des inventaires</a></li>
-            <li><a href="#">Historique des entrées/sorties</a></li>
+            <li><a href="#" onclick="window.location.href='Calendrier.jsp'" >Calendrier des inventaires</a></li>
+            <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
         </ul>
     </li>
     <li id="search">
