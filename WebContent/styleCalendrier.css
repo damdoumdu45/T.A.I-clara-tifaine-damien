@@ -126,10 +126,6 @@
 	margin: 1rem;
 	display: grid;
 	grid-template-columns: 64% auto;
-	grid-gap: 2rem;
-}
-
-.card {
 	background: #fff;
 	border-radius: 10px;
 	box-shadow: var(--shadow);
@@ -138,27 +134,21 @@
 
 
 body{
-	background:#c0c0c0;
+	background-color: rgb(236,245,249);
 }
-.btn-round {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: blue;
-  color: white;
-  border: none;
-  cursor: pointer;
+.button_square {
+   width:40%;
+   height:100%;
+   border:none;
+   background-color: rgb(90,90,90);
+   color:white;
+   outline:none;
+   transition:0.2s;
+  
 }
 
-.btn-round span {
-  display: block;
-  font-size: 30px;
-  margin-top: 6px;
-  margin-left: 2px;
+.button_square:hover {
+  background-color: rgb(110,110,110);
 }
 
 html, body {

@@ -74,11 +74,11 @@
     color: white;
 }
 #search_text:focus {
-    background: rgb(64, 151, 119);
+    background: rgb(227, 226, 246);
 }
 #search_button {
     border: 0 none;
-    background: #1f7f5c url(search.png) center no-repeat;
+    background-color: rgb(110,0,255);/*#1f7f5c url(search.png) center no-repeat;*/
     width: 60px;
     float: left;
     padding: 0;
@@ -129,9 +129,10 @@
 }
 .analytics_graph {
 	margin: 2rem;
-	display: grid;
-	grid-template-columns: 64% auto;
-	grid-gap: 2rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	padding: 1rem;
 }
 
 
@@ -144,7 +145,7 @@
 
 
 body{
-	background:#c0c0c0;
+	background-color:rgb(236,245,249);
 }
 .btn-round {
   position: fixed;
@@ -170,5 +171,6 @@ body{
 h1 {
   text-align: center; /* Centrer le titre */
   margin-top: 50px; /* Ajouter une marge de 50 pixels au-dessus du titre */
+  font-family: Montserrat, sans-serif;
 }
 

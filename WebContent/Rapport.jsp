@@ -47,32 +47,27 @@
 <h1>Rapport</h1>
 
 <div class="analytics_graph">
-	<div class="card engage-card">
-		
-		<div class="card-body">
-			<div id="chart"></div>
-		</div>
-	</div>
+	<div id="chart"></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 <script>
 let options = {
           series: [{
-          name: 'Income',
+          name: 'Quantité sortante',
           type: 'column',
           data: [1.4, 2, 2.5, 1.5, 2.5, 2.8, 3.8, 4.6]
         }, {
-          name: 'Cashflow',
+          name: 'Quanitité entrante',
           type: 'column',
           data: [1.1, 3, 3.1, 4, 4.1, 4.9, 6.5, 8.5]
         }, {
-          name: 'Revenue',
+          name: 'Revenu',
           type: 'line',
           data: [20, 29, 37, 36, 44, 45, 50, 58]
         }],
           chart: {
-          height: 350,
+          height: 500,
           type: 'line',
           stacked: false
         },
@@ -83,9 +78,8 @@ let options = {
           width: [1, 1, 4]
         },
         title: {
-          text: 'XYZ - Stock Analysis (2009 - 2016)',
-          align: 'left',
-          offsetX: 110
+          text: 'Stock Analysis',
+          align: 'center',
         },
         xaxis: {
           categories: ["Juillet 2022", "Août 2022", "Septembre 2022", "Octobre 2022", "Novembre 2022", "Décembre 2022", "Janvier 2023", "Février 2023"],
@@ -105,7 +99,7 @@ let options = {
               }
             },
             title: {
-              text: "Income (thousand crores)",
+              text: "Quantité sortante",
               style: {
                 color: '#008FFB',
               }
@@ -115,7 +109,7 @@ let options = {
             }
           },
           {
-            seriesName: 'Income',
+            seriesName: 'Quantité sortante',
             opposite: true,
             axisTicks: {
               show: true,
@@ -130,14 +124,14 @@ let options = {
               }
             },
             title: {
-              text: "Operating Cashflow (thousand crores)",
+              text: "Quantité entrante",
               style: {
                 color: '#00E396',
               }
             },
           },
           {
-            seriesName: 'Revenue',
+            seriesName: 'Revenu',
             opposite: true,
             axisTicks: {
               show: true,
@@ -152,7 +146,7 @@ let options = {
               },
             },
             title: {
-              text: "Revenue (thousand crores)",
+              text: "Revenu",
               style: {
                 color: '#FEB019',
               }
@@ -162,7 +156,7 @@ let options = {
         tooltip: {
           fixed: {
             enabled: true,
-            position: 'topLeft', // topRight, topLeft, bottomRight, bottomLeft
+            position: 'topRight', // topRight, topLeft, bottomRight, bottomLeft
             offsetY: 30,
             offsetX: 60
           },
