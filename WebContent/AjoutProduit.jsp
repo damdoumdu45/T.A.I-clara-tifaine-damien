@@ -81,7 +81,7 @@
     	</div>
   
     
-    <button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer</button>
+    <input type="submit" class="btn_enfer" value="Enregistrer et fermer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer
 	</form>
 </div>
 
