@@ -227,14 +227,14 @@ h1 {
   bottom: 20px;
   right: 20px;
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   background-color: blue;
   color: white;
   border: none;
   cursor: pointer;
-  margin-left:5px;
+  margin-left:18px;
 }
 
 .btn-entree span {
