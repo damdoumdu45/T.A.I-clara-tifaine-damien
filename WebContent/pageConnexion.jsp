@@ -18,13 +18,15 @@
 <p style="text-align:center"><img src="logo.png" width="225px"></p>
 </div>
 <form style="text-align:center" action="ConnexionControleur" method="get">
-<p>Adresse mail <input type="text" name="mail" /> <br /></p>
-<p>Mot de passe <input type="text" name="mdp" /> <br /></p>
-<p><input type="submit" /></p>
+	<p class="jiji">Adresse mail <input type="text" name="mail" /> <br /></p>
+
+	<p class="jiji">Mot de passe <input class="popo" type="text" name="mdp" /> <br /></p>
+
+	<p><input class="btn_enfer" type="submit" /></p>
 </form>
 
 
-<button class="btn-round" onclick="window.location.href='AjoutEmploye.jsp'"><span>+</span></button>
+<button class="btn-round" style="margin-top:20px" onclick="window.location.href='AjoutEmploye.jsp'"><span>+</span></button>
 </div>
 </body>
 </html>
