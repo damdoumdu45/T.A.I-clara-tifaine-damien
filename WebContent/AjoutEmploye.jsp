@@ -10,10 +10,10 @@
 <body>
 <h1>Ajouter un nouvel employe</h1>
 <div class="container">
-	<form action="MembreControleur" method="post">
-		<p>mail : </p><input type="text" name="mail" /> <br />
-		mdp : <input type="text" name="mdp" /> <br />
-		<input type="submit" />
+	<form style="text-align:center" action="MembreControleur" method="post">
+		<p class ="jiji">Adresse mail </p><input type="text" name="mail" /> <br />
+		<p class="jiji">Mot de passe</p><input class="popo" type="text" name="mdp" /> <br />
+		<input class="btn_co" type="submit" />
 	</form>
 </div>
 
