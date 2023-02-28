@@ -11,6 +11,7 @@
 <title>Inventaire</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css" />
+<script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <ul class="nav">
@@ -30,17 +31,18 @@
             <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
         </ul>
     </li>
-    <li id="search">
+     <li id="search">
         <form action="" method="get">
             <input type="text" name="search_text" id="search_text" placeholder="Rechercher un article"/>
-            <input type="button" name="search_button" id="search_button"></a>
+            <!--  <input type="button" name="search_button" id="search_button">-->
+            <button id="search_button"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
         </form>
     </li>
     <li id="settings">
-        <a href="#"><img src="settings.png" /></a>
+        <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
     </li>
     <li id="settings">
-        <a href="#"><img src="bell1.png" /></a>
+        <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
 <h1>Inventaire</h1>
@@ -75,6 +77,19 @@
   </tbody>
 </table>
 </div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
