@@ -98,7 +98,7 @@
 </table>
 </div>
 
-<button class="btn_enfer" onclick="window.location.href='PlannificationInventaire.jsp'"><b>Planifier inventaire</b></button>
+<input type="submit" class="btn_enfer" value="Planifier inventaire" onclick="window.location.href='PlannificationInventaire.jsp'">
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
