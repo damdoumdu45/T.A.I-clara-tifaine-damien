@@ -1,4 +1,3 @@
-@charset "ISO-8859-1";
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 
 * {
@@ -79,7 +78,7 @@
 }
 #search_button {
     border: 0 none;
-    background: rgb(110,0,255);
+    background-color: rgb(110,0,255);
     width: 60px;
     float: left;
     padding: 0;
@@ -128,6 +127,22 @@
 	grid-template-columns: 64% auto;
 	grid-gap: 2rem;
 }
+.analytics_graph {
+	margin: 2rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	padding: 1rem;
+}
+
+.analytics_connect {
+	margin: 2rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	padding: 1rem;
+	height: 600px;
+}
 
 .card {
 	background: #fff;
@@ -138,7 +153,7 @@
 
 
 body{
-	background:#c0c0c0;
+	background-color:rgb(236,245,249);
 }
 .btn-round {
   position: fixed;
@@ -159,6 +174,11 @@ body{
   font-size: 30px;
   margin-top: 6px;
   margin-left: 2px;
+}
+h1 {
+  text-align: center; /* Centrer le titre */
+  margin-top: 50px; /* Ajouter une marge de 50 pixels au-dessus du titre */
+  font-family: Montserrat, sans-serif;
 }
 
 .container{
@@ -211,3 +231,75 @@ body{
 	margin-top : 20px;
 	font-family: Montserrat, sans-serif;
 }
+table{
+	border-collapse : collapse;
+}
+
+
+.analytics_graph {
+  margin: 2rem;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: var(--shadow);
+   padding: 1rem;
+}
+
+.cdd{
+	text-align : right;
+	font-family: Montserrat, sans-serif;
+}
+
+.qtt{
+	text-align : center;
+	margin-top : -20px;
+	font-family: Montserrat, sans-serif;
+}
+
+.dtcrea{
+	text-align : left;
+	margin-top : -20px;
+	font-family: Montserrat, sans-serif;
+}
+
+.btn_enfer {
+    	display: inline-block;
+    	background-color: #555B61;
+       	border-radius: 10px;
+  	  	border: 4px double #cccccc;
+     	color: #eeeeee;
+   		text-align: center;
+   		font-size: 10px;
+   		padding: 10px;
+      	width: 200px;
+        transition: all 0.5s;
+   		cursor: pointer;
+        margin: 5px;
+        font-family: Montserrat, sans-serif;
+        margin-right :60px;
+        margin-top : 40px;
+      	}
+   
+.btn_enfer span {
+	       		cursor: pointer;
+	       		display: inline-block;
+	       		position: relative;
+	       		transition: 0.5s;
+	     	}
+.btn_enfer span:after {
+	       		content: "\00bb";
+	       		position: absolute;
+	       		opacity: 0;
+	       		top: 0;
+	       		right: -20px;
+	       		transition: 0.5s;
+	     	}
+.btn_enfer:hover {
+	       		background-color: #7F7F7F;
+	     	}
+.btn_enfer:hover span {
+	       		padding-right: 25px;
+	     	}
+.btn_enfer:hover span:after {
+	       		opacity: 1;
+	       		right: 0;
+	     	}

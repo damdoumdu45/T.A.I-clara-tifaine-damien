@@ -11,7 +11,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Ajouter un bon d'entrée</title>
 
-<link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="ajouterBonEntree.css">
+<link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="styleAjoutProduit.css">
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  
