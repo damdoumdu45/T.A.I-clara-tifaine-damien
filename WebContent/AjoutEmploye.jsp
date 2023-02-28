@@ -4,15 +4,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="styleAjoutProduit.css">
 <title>Hoffgevouet</title>
 </head>
 <body>
-<h2>Ajouter un nouvel employe</h2>
-<form action="MembreControleur" method="post">
-mail : <input type="text" name="mail" /> <br />
-mdp : <input type="password" name="mdp" /> <br />
-<input type="submit" />
-</form>
+<h1>Ajouter un nouvel employe</h1>
+<div class="container">
+	<form action="MembreControleur" method="post">
+		<p>mail : </p><input type="text" name="mail" /> <br />
+		mdp : <input type="text" name="mdp" /> <br />
+		<input type="submit" />
+	</form>
+</div>
 
 </body>
 </html>

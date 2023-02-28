@@ -11,18 +11,23 @@
 <title> Hoffgevouet</title>
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
+
 <body>
+
+<h1 style="text-align:center">Connectez-vous</h1>
+
 <div class="analytics_connect">
-<h1 style="text-align:center">Connexion</h1>
+
+
 <div style="margin-top:30px;margin-bottom:30px" "class = "logo">
 <p style="text-align:center"><img src="logo.png" width="225px"></p>
 </div>
 <form style="text-align:center" action="ConnexionControleur" method="get">
-	<p class="jiji">Adresse mail <input type="text" name="mail" /> <br /></p>
+	<p class="jiji">Adresse mail </p><input type="text" name="mail" /> <br />
 
-	<p class="jiji">Mot de passe <input class="popo" type="text" name="mdp" /> <br /></p>
+	<p class="jiji">Mot de passe </p><input class="popo" type="text" name="mdp" /> <br />
 
-	<p><input class="btn_enfer" type="submit" /></p>
+	<p><input class="btn_co" type="submit" /></p>
 </form>
 
 
