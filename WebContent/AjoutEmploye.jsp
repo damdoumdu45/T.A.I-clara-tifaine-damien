@@ -17,4 +17,4 @@ mdp : <input type="text" name="mdp" /> <br />
 </form>
 
 </body>
-</html>
+</html>"WebContent/AjoutProduit.jsp"

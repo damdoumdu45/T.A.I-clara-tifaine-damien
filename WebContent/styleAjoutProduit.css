@@ -75,11 +75,11 @@
     color: white;
 }
 #search_text:focus {
-    background: rgb(64, 151, 119);
+    background: rgb(227, 226, 246);
 }
 #search_button {
     border: 0 none;
-    background: #1f7f5c url(search.png) center no-repeat;
+    background: rgb(110,0,255);
     width: 60px;
     float: left;
     padding: 0;
@@ -162,12 +162,12 @@ body{
 }
 
 .container{
-  border: 1px white; /* bordure noire d'une épaisseur de 1 pixel */
-  padding: 10px; /* ajout d'un espace intérieur pour éviter que le texte ne touche la bordure */
-  background-color: white;
-  margin-top: 30px;
+  	margin: 2rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	padding: 1rem;
 }
-
 
 .cdd{
 	text-align : right;

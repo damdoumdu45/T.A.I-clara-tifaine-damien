@@ -12,11 +12,9 @@
 <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-<div class="analytics">
-<div class="card emails-card">
-
-<h2 style="text-align:center">Connexion</h2>
-<div class = "logo">
+<div class="analytics_connect">
+<h1 style="text-align:center">Connexion</h1>
+<div style="margin-top:30px;margin-bottom:30px" "class = "logo">
 <p style="text-align:center"><img src="logo.png" width="225px"></p>
 </div>
 <form style="text-align:center" action="MembreControleur" method="post">
@@ -27,6 +25,6 @@
 
 
 <button class="btn-round" onclick="window.location.href='AjoutEmploye.jsp'"><span>+</span></button>
-</div></div>
+</div>
 </body>
 </html>
