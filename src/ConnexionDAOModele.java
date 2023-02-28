@@ -13,7 +13,7 @@ public class ConnexionDAOModele {
         Connection connexion = connexionBDDModele.getConnexion();
         boolean Result = false;
         try        {
-            String requete = new String("SELECT mail, mdp FROM utilisateur WHERE mail = ? AND mdp = ?;");
+            String requete = new String("SELECT mail, mdp FROM utilisateur WHERE mail = ? AND mdp = MD5(?);");
             PreparedStatement statement = connexion.prepareStatement(requete);
             statement.setString(1, mail);
             statement.setString(2, mdp);

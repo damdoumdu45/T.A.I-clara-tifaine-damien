@@ -10,7 +10,7 @@
 <h2>Ajouter un nouvel employe</h2>
 <form action="MembreControleur" method="post">
 mail : <input type="text" name="mail" /> <br />
-mdp : <input type="text" name="mdp" /> <br />
+mdp : <input type="password" name="mdp" /> <br />
 <input type="submit" />
 </form>
 
