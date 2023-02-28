@@ -50,29 +50,49 @@
 <table class="table table-striped table-hover">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Sélectionner</th>
+      <th scope="col">Code article</th>
+      <th scope="col">Description</th>
+      <th scope="col">Quantité en stock</th>
+      <th scope="col">Criticité</th>
+      <th scope="col">Règle</th>
+      <th scope="col">Date du dernier inventaire</th>
+      <th scope="col">Entrée/Sortie</th>
+      <th scope="col">Indice de confiance</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
+      <th scope="row" style="text-align:center"><input type="checkbox"></th>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
     </tr>
     <tr>
-      <th scope="row">2</th>
+      <th scope="row"style="text-align:center"><input type="checkbox"></th>
       <td>Jacob</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
       <td>Thornton</td>
       <td>@fat</td>
     </tr>
     <tr>
-      <th scope="row">3</th>
+      <th scope="row"style="text-align:center"><input type="checkbox"></th>
       <td colspan="2">Larry the Bird</td>
       <td>@twitter</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
+      <td>Mark</td>
     </tr>
   </tbody>
 </table>
