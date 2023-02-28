@@ -25,7 +25,7 @@
 <form style="text-align:center" action="ConnexionControleur" method="get">
 	<p class="jiji">Adresse mail </p><input type="text" name="mail" /> <br />
 
-	<p class="jiji">Mot de passe </p><input class="popo" type="text" name="mdp" /> <br />
+	<p class="jiji">Mot de passe </p><input class="popo" type="password" name="mdp" /> <br />
 
 	<p><input class="btn_co" type="submit" /></p>
 </form>

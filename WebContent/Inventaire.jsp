@@ -67,7 +67,9 @@
       <td>Mark</td>
       <td>Mark</td>
       <td>Mark</td>
-      <td>Mark</td>
+      <td><c:forEach items="${criticiteListe}" var="criticité">
+		<option value="${criticite.id}">${role.nom}</option>
+		</c:forEach></td>
       <td>Mark</td>
       <td>Mark</td>
       <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
