@@ -146,13 +146,13 @@ table{
 }
 
 
-.container{
-  border: 1px white; /* bordure noire d'une épaisseur de 1 pixel */
-  padding: 10px; /* ajout d'un espace intérieur pour éviter que le texte ne touche la bordure */
-  background-color: white;
-  margin-top: 30px;
+.analytics_graph {
+    margin: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 1rem;
 }
-
 
 .cdd{
 	text-align : right;
