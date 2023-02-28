@@ -10,6 +10,7 @@
 </head>
 
 <link rel="stylesheet" type="text/css" href="style.css" />
+<script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
 
 <body>
 
@@ -34,14 +35,15 @@
     <li id="search">
         <form action="" method="get">
             <input type="text" name="search_text" id="search_text" placeholder="Rechercher un article"/>
-            <input type="button" name="search_button" id="search_button"></a>
+            <!--  <input type="button" name="search_button" id="search_button">-->
+            <button id="search_button"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
         </form>
     </li>
     <li id="settings">
-        <a href="#"><img src="settings.png" /></a>
+        <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
     </li>
     <li id="settings">
-        <a href="#"><img src="bell1.png" /></a>
+        <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
 
