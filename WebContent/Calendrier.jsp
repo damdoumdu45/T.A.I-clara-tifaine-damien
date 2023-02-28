@@ -125,7 +125,7 @@
 
             </section>
         </section>
-        <button class="button" onclick="window.location.href='Rapport.jsp'"> Generer un rapport</button>
+        <button class="button_square" onclick="window.location.href='Rapport.jsp'"> Generer un rapport</button>
 <script src="./script.js"></script>
 </body>
 </html>

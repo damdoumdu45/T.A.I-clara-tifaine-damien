@@ -7,6 +7,10 @@
 <script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
 <title>Ajouter un produit</title>
 <link rel="stylesheet" type="text/css" href="styleAjoutProduit.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
 </head>
 <body>
 <ul class="nav">
@@ -55,8 +59,13 @@
     	</div>
   
   		<div class="dtcrea">
-    	<label for="date_creation">Date de création :</label>
-    	<input type="text" id="date_creation" name="date_creation"><br>
+    	<label for="date_creation">Date de création :</label>     
+    	<input type="date" id="datepicker">    
+    	<script>    
+    		$(function() {
+    			$("#datepicker").datepicker();
+    		});
+  		</script>
     	</div>
 
 		<div class="regle">
@@ -66,7 +75,7 @@
 
 		<div class="fourn">
     	<label for="fournisseur">Fournisseur :</label>
-    	<input type="fournisseur" id="fournisseur" name="fournisseur"><br>
+    	<input type="text" id="fournisseur" name="fournisseur"><br>
     	</div>
   
     
