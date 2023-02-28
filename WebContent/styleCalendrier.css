@@ -137,18 +137,19 @@ body{
 	background-color:rgb(236,245,249);
 }
 .button_square {
-   width:40%;
+   width:60%;
    height:100%;
    border:none;
    background-color: rgb(90,90,90);
    color:white;
    outline:none;
    transition:0.2s;
+   margin-top: 30 px;
   
 }
 
 .button_square:hover {
-  background-color: rgb(110,110,110);
+  background-color: rgb(110,0,255);
 }
 
 html, body {

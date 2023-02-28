@@ -127,6 +127,13 @@
 	grid-template-columns: 64% auto;
 	grid-gap: 2rem;
 }
+.analytics_graph {
+	margin: 2rem;
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: var(--shadow);
+	padding: 1rem;
+}
 
 .card {
 	background: #fff;
@@ -159,4 +166,8 @@ body{
   margin-top: 6px;
   margin-left: 2px;
 }
-
+h1 {
+  text-align: center; /* Centrer le titre */
+  margin-top: 50px; /* Ajouter une marge de 50 pixels au-dessus du titre */
+  font-family: Montserrat, sans-serif;
+}
