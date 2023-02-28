@@ -1,13 +1,13 @@
 
 public class MembreBeanModele {
 	private int id;
-	private String nom;
-	private String prenom;
 	private String mail;
 	private String mdp;
 	
 	public MembreBeanModele() {
 		
+	
+
 	}
 
 	public int getId() {
@@ -16,22 +16,6 @@ public class MembreBeanModele {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-
-	public String getPrenom() {
-		return prenom;
-	}
-
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
 	}
 
 	public String getMail() {
@@ -49,6 +33,4 @@ public class MembreBeanModele {
 	public void setMdp(String mdp) {
 		this.mdp = mdp;
 	}
-
-	
 }

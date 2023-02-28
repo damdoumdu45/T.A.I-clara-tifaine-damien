@@ -9,12 +9,10 @@
 <body>
 <h2>Ajouter un nouvel employe</h2>
 <form action="MembreControleur" method="post">
-nom : <input type="text" name="nom" /> <br />
-prenom : <input type="text" name="prenom" /> <br />
 mail : <input type="text" name="mail" /> <br />
 mdp : <input type="text" name="mdp" /> <br />
 <input type="submit" />
 </form>
 
 </body>
-</html>"WebContent/AjoutProduit.jsp"
+</html>
