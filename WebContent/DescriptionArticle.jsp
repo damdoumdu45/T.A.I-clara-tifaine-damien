@@ -6,6 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Description article</title>
 <link rel="stylesheet" type="text/css" href="styleAjoutProduit.css" />
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+
+<script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <ul class="nav">
@@ -28,17 +34,19 @@
     <li id="search">
         <form action="" method="get">
             <input type="text" name="search_text" id="search_text" placeholder="Rechercher un article"/>
-            <input type="button" name="search_button" id="search_button"></a>
+            <!--  <input type="button" name="search_button" id="search_button">-->
+            <button id="search_button"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
         </form>
     </li>
     <li id="settings">
-        <a href="#"><img src="settings.png" /></a>
+        <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
     </li>
     <li id="settings">
-        <a href="#"><img src="bell1.png" /></a>
+        <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
 
+<h1>Description de l'article</h1>
 
 <div class="container">
 	<form action="sauvegarderDonnees" method="POST">
@@ -53,8 +61,15 @@
     	</div>
   
   		<div class="dtcrea">
-    	<label for="date_creation">Date de création :</label>
-    	<input type="text" id="date_creation" name="date_creation"><br>
+    	<form>    
+    		<label for="datepicker">Sélectionnez une date :</label>    
+    		<input type="date" id="datepicker">  
+    	</form>  
+    	<script>    
+    		$(function() {
+    			$("#datepicker").datepicker();
+    		});
+  		</script>
     	</div>
 
 		<div class="regle">
@@ -67,51 +82,9 @@
     	<input type="fournisseur" id="fournisseur" name="fournisseur"><br>
     	</div>
   
-  		<style>
-     		button {
-        		display: inline-block;
-    	    	background-color: #555B61;
-    	    	border-radius: 10px;
-     	  		border: 4px double #cccccc;
-     	    	color: #eeeeee;
-      	  		text-align: center;
-       			font-size: 10px;
-       	 		padding: 10px;
-      			width: 200px;
-        		transition: all 0.5s;
-        		cursor: pointer;
-        		margin: 5px;
-        		font-family: Montserrat, sans-serif;
-        		
-      		}
-      		button span {
-	       		cursor: pointer;
-	       		display: inline-block;
-	       		position: relative;
-	       		transition: 0.5s;
-	     	}
-	     	button span:after {
-	       		content: "\00bb";
-	       		position: absolute;
-	       		opacity: 0;
-	       		top: 0;
-	       		right: -20px;
-	       		transition: 0.5s;
-	     	}
-	    	button:hover {
-	       		background-color: #7F7F7F;
-	     	}
-	     	button:hover span {
-	       		padding-right: 25px;
-	     	}
-	     	button:hover span:after {
-	       		opacity: 1;
-	       		right: 0;
-	     	}
-    </style>
-    
-    <button href="#" onclick="window.location.href='Inventaire.jsp'"><span>Enregistrer et fermer</span></button>
-	</form>
+  	</form>
+  	
+  	<button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer</button>
 </div>
 </body>
 </html>

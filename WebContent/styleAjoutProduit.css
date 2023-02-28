@@ -197,16 +197,16 @@ h1 {
 }
 
 .dpt{
-	text-align : left;
-	margin-top : 20px;
-	margin-right :20px;
+	text-align : center;
+	margin-top : -20px;
+	margin-right :-20px;
 	font-family: Montserrat, sans-serif;
 }
 
 .dtcrea{
 	text-align : left ; 
 	margin-right :20px;
-	margin-top : 20px;
+	margin-top : -20px;
 	font-family: Montserrat, sans-serif;
 	
 }
@@ -221,9 +221,9 @@ h1 {
 
 
 .fourn{
-	text-align : left;
-	margin-right :20px;
-	margin-top : 20px;
+	text-align : center;
+	margin-right :-20px;
+	margin-top : -20px;
 	font-family: Montserrat, sans-serif;
 }
 table{
@@ -250,11 +250,7 @@ table{
 	font-family: Montserrat, sans-serif;
 }
 
-.dtcrea{
-	text-align : left;
-	margin-top : -20px;
-	font-family: Montserrat, sans-serif;
-}
+
 
 .btn_enfer {
     	display: inline-block;
