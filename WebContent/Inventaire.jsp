@@ -70,7 +70,7 @@
       <td>Mark</td>
       <td>Mark</td>
       <td>Mark</td>
-      <td>Otto</td>
+      <td><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'">+</button><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'">-</button></td>
       <td>@mdo</td>
     </tr>
     <tr>

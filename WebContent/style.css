@@ -223,3 +223,23 @@ h1 {
 	       		opacity: 1;
 	       		right: 0;
 	     	}
+.btn-entree {
+  bottom: 20px;
+  right: 20px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-left:5px;
+}
+
+.btn-entree span {
+  display:flex;
+  font-size: 30px;
+  margin-top: 6px;
+  margin-left: 2px;
+}
