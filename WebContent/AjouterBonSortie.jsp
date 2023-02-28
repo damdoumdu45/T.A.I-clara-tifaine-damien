@@ -9,6 +9,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Ajouter un bon de sortie</title>
 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="styleAjoutProduit.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  
@@ -48,26 +49,33 @@
         <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
-<table>
-	<tr>
-		<th>Code article</th>
-		<th>Description</th>
-		<th>Quantité en stock</th>
-		<th>Criticité</th>
-		<th>Règle</th>
-		<th>Date du dernier inventaire</th>
-	</tr>
-	<c:forEach items="${listeProduit}" var="produit">
-	<tr>
-		<td><c:out value="${produit.code_article}" /> </td>
-		<td><c:out value="${produit.description}" /> </td>
-		<td><c:out value="${produit.quantite}" /></td>
-		<td><c:out value="${produit.criticite}" /></td>
-		<td><c:out value="${produit.regle}" /></td>
-		<td><c:out value="${produit.date_dernier_inventaire}" /></td>
-	</tr>
-	</c:forEach>
+
+
+<div class="analytics_graph">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Code article</th>
+      <th scope="col">Description</th>
+      <th scope="col">Quantité en stock</th>
+      <th scope="col">Criticité</th>
+      <th scope="col">Règle</th>
+      <th scope="col">Date du dernier inventaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">EHJS454</th>
+      <td>Vis</td>
+      <td>1798</td>
+      <td>Critique</td>
+      <td>inférieur 2000</td>
+      <td>12/05/23</td>
+    </tr>
+    
+  </tbody>
 </table>
+</div>
 
 <h1>Bon de sortie</h1>
 <div class="container">
