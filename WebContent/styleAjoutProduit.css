@@ -172,17 +172,20 @@ body{
 .cdd{
 	text-align : right;
 	margin-right :60px;
+	font-family: Montserrat, sans-serif;
 }
 
 .dpt{
 	text-align : left;
 	margin-top : -20px;
 	margin-right :60px;
+	font-family: Montserrat, sans-serif;
 }
 
 .dtcrea{
 	text-align : right ; 
 	margin-right :60px;
+	font-family: Montserrat, sans-serif;
 	
 }
 
@@ -190,9 +193,15 @@ body{
 	text-align : left;
 	margin-top : -20px;
 	margin-right :60px;
+	font-family: Montserrat, sans-serif;
 }
 
 .btt{
 	text-align : right;
 	margin-right :60px;
+	font-family: Montserrat, sans-serif;
+}
+
+.fourn{
+	font-family: Montserrat, sans-serif;
 }

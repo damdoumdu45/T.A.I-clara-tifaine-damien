@@ -156,22 +156,24 @@ table{
 
 .cdd{
 	text-align : right;
+	font-family: Montserrat, sans-serif;
 }
 
 .qtt{
 	text-align : center;
 	margin-top : -20px;
+	font-family: Montserrat, sans-serif;
 }
 
 .dtcrea{
 	text-align : left;
 	margin-top : -20px;
+	font-family: Montserrat, sans-serif;
 }
 
 .btt{
 	text-align : right;
 	margin-right :60px;
-	margin-top : 20px;
+	font-family: Montserrat, sans-serif;
     
 }
-
