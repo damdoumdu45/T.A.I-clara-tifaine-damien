@@ -75,11 +75,11 @@
     color: white;
 }
 #search_text:focus {
-    background: rgb(64, 151, 119);
+    background: rgb(227, 226, 246);
 }
 #search_button {
     border: 0 none;
-    background: #1f7f5c url(search.png) center no-repeat;
+    background-color: rgb(110,0,255);
     width: 60px;
     float: left;
     padding: 0;
@@ -134,7 +134,7 @@
 
 
 body{
-	background-color: rgb(236,245,249);
+	background-color:rgb(236,245,249);
 }
 .button_square {
    width:40%;
@@ -152,7 +152,7 @@ body{
 }
 
 html, body {
-    background-color: rgb(240, 240, 240);
+    background-color:rgb(236,245,249);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     width: 100%;
     height: 100%;
