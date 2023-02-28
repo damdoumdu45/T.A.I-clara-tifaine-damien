@@ -17,6 +17,8 @@
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 
+<script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
 
@@ -40,14 +42,15 @@
     <li id="search">
         <form action="" method="get">
             <input type="text" name="search_text" id="search_text" placeholder="Rechercher un article"/>
-            <input type="button" name="search_button" id="search_button"></a>
+            <!--  <input type="button" name="search_button" id="search_button">-->
+            <button id="search_button"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
         </form>
     </li>
     <li id="settings">
-        <a href="#"><img src="settings.png" /></a>
+        <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
     </li>
     <li id="settings">
-        <a href="#"><img src="bell1.png" /></a>
+        <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
 
@@ -72,8 +75,10 @@
 	</c:forEach>
 </table>
 
+<h1>Bon d'entrée</h1>
 
 <div class="analytics_graph">
+	
 	<form action="sauvegarderDonnees" method="POST">
 		<div class="cdd">
     	<label for="code_article">Code article :</label>
@@ -96,6 +101,7 @@
     			$("#datepicker").datepicker();
     		});
   		</script>
+  		</div>
     </form>
     	
     	<button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer</button>
