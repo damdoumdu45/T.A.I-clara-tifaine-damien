@@ -45,6 +45,8 @@
     </li>
 </ul>
 
+<h1>Ajout d'un nouveau produit</h1>
+
 
 <div class="container">
 	<form action="sauvegarderDonnees" method="POST">

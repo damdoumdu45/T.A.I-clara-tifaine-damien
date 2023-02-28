@@ -7,7 +7,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Historique des entrées/sorties</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inventaire</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
 </head>
@@ -44,5 +46,51 @@
     </li>
 </ul>
 
+<h1>Historique des entrées et sorties</h1>
+
+<div class="analytics_graph">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Code article</th>
+      <th scope="col">Description</th>
+      <th scope="col">Quantité en stock</th>
+      <th scope="col">Entrée/Sortie</th>
+      <th scope="col">Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">EHJS454</th>
+      <td>Vis</td>
+      <td>1798</td>
+      <td>-100</td>
+      <td>16/18/23</td>
+    </tr>
+    <tr>
+      <th scope="row">J56EG7J</th>
+      <td>Perçeuse</td>
+      <td>56</td>
+      <td>+1</td>
+      <td>26/07/23</td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
