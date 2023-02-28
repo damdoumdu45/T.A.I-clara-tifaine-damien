@@ -126,6 +126,6 @@
             </section>
         </section>
         <button class="button_square" onclick="window.location.href='Rapport.jsp'"> Generer un rapport</button>
-<script src="./script.js"></script>
+<script src="./scriptCalendrier.js"></script>
 </body>
 </html>
