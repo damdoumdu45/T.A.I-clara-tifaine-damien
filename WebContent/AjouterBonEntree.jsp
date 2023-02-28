@@ -69,7 +69,7 @@
 </table>
 
 
-<div class="container">
+<div class="analytics_graph">
 	<form action="sauvegarderDonnees" method="POST">
 		<div class="cdd">
     	<label for="code_article">Code article :</label>
@@ -86,7 +86,7 @@
     	<input type="text" id="date_entree" name="date_entree"><br>
     	</div>
     	
-    	 <style>
+    	<style>
      		button {
         		display: inline-block;
     	    	background-color: #555B61;
@@ -126,10 +126,10 @@
 	       		opacity: 1;
 	       		right: 0;
 	     	}
-    </style>
-    
+		</style>
+
     <button href="Inventaire.jsp" onclick="window.location.href='Inventaire.jsp'"><span>Enregistrer et fermer</span></button>
 	</form>
-
+</div>
 </body>
 </html>
