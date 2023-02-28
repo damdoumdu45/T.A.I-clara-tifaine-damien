@@ -9,7 +9,10 @@
 <head>
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ajouter un bon d'entrée</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 
 <link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="styleAjoutProduit.css">
 
@@ -54,26 +57,32 @@
     </li>
 </ul>
 
-<table>
-	<tr>
-		<th>Code article</th>
-		<th>Description</th>
-		<th>Quantité en stock</th>
-		<th>Criticité</th>
-		<th>Règle</th>
-		<th>Date du dernier inventaire</th>
-	</tr>
-	<c:forEach items="${listeProduit}" var="produit">
-	<tr>
-		<td><c:out value="${produit.code_article}" /> </td>
-		<td><c:out value="${produit.description}" /> </td>
-		<td><c:out value="${produit.quantite}" /></td>
-		<td><c:out value="${produit.criticite}" /></td>
-		<td><c:out value="${produit.regle}" /></td>
-		<td><c:out value="${produit.date_dernier_inventaire}" /></td>
-	</tr>
-	</c:forEach>
+<div class="analytics_graph">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">Code article</th>
+      <th scope="col">Description</th>
+      <th scope="col">Quantité en stock</th>
+      <th scope="col">Criticité</th>
+      <th scope="col">Règle</th>
+      <th scope="col">Date du dernier inventaire</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">EHJS454</th>
+      <td>Vis</td>
+      <td>1798</td>
+      <td>Critique</td>
+      <td>inférieur 2000</td>
+      <td>12/05/23</td>
+    </tr>
+    
+  </tbody>
 </table>
+</div>
+
 
 <h1>Bon d'entrée</h1>
 
@@ -107,5 +116,7 @@
     	<button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer</button>
 	
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
