@@ -70,7 +70,7 @@
       <td>Mark</td>
       <td>Mark</td>
       <td>Mark</td>
-      <td><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'">+</button><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'">-</button></td>
+      <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
       <td>@mdo</td>
     </tr>
     <tr>
@@ -81,7 +81,7 @@
       <td>Mark</td>
       <td>Mark</td>
       <td>Mark</td>
-      <td>Thornton</td>
+      <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
       <td>@fat</td>
     </tr>
     <tr>
@@ -91,14 +91,14 @@
       <td>Mark</td>
       <td>Mark</td>
       <td>Mark</td>
-      <td>Mark</td>
+      <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
       <td>Mark</td>
     </tr>
   </tbody>
 </table>
 </div>
 
-<button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'"><b>Planifier inventaire</b></button>
+<input type="submit" class="btn_enfer" value="Planifier inventaire" onclick="window.location.href='PlannificationInventaire.jsp'">
 
 <nav aria-label="Page navigation example">
   <ul class="pagination justify-content-center">
