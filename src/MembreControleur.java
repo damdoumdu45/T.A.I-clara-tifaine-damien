@@ -1,4 +1,7 @@
+
+
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -7,17 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class MembreControleur
+ * Servlet implementation class inventairesControleur
  */
 @WebServlet("/MembreControleur")
 public class MembreControleur extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
+	private static final long serialVersionUID = 1L; 
     /**
-     * Default constructor. 
+     * @see HttpServlet#HttpServlet()
      */
     public MembreControleur() {
-    	super();
+        super();
         // TODO Auto-generated constructor stub
     }
 
@@ -26,31 +28,29 @@ public class MembreControleur extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		MembreDAOModele membreDAOModele = new MembreDAOModele();
-		
-		List<MembreBeanModele> membreListe = membreDAOModele.lireListe();
+		MembreDAOModele MembreDAOModele = new MembreDAOModele();
+		List<MembreBeanModele> membreListe = MembreDAOModele.lireListe();
 		request.setAttribute("membreListe", membreListe);
+
+		request.getRequestDispatcher("/AjoutEmploye.jsp").forward(request, response);
+
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String nom = request.getParameter("nom");
-		String prenom = request.getParameter("prenom");
+		// TODO Auto-generated method stub
 		String mail = request.getParameter("mail");
 		String mdp = request.getParameter("mdp");
 		
-		MembreBeanModele membre = new MembreBeanModele();
-		MembreDAOModele membreDAOModele = new MembreDAOModele();
-		
-		membre.setNom(nom);
-		membre.setPrenom(prenom);
+		MembreBeanModele membre= new MembreBeanModele();
 		membre.setMail(mail);
 		membre.setMdp(mdp);
 		
-		membreDAOModele.creer(membre);
-		
+		MembreDAOModele MembreDAOModele = new MembreDAOModele();
+		MembreDAOModele.creer(membre);
+
 		
 		doGet(request, response);
 	}
