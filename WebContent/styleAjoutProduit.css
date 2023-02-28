@@ -170,38 +170,44 @@ body{
 }
 
 .cdd{
-	text-align : right;
-	margin-right :60px;
+	text-align : left ;
+	margin-right :100px;
+	margin-top : 20px;
 	font-family: Montserrat, sans-serif;
 }
 
 .dpt{
 	text-align : left;
-	margin-top : -20px;
-	margin-right :60px;
+	margin-top : 20px;
+	margin-right :100px;
 	font-family: Montserrat, sans-serif;
 }
 
 .dtcrea{
-	text-align : right ; 
-	margin-right :60px;
+	text-align : left ; 
+	margin-right :100px;
+	margin-top : 20px;
 	font-family: Montserrat, sans-serif;
 	
 }
 
 .regle{
 	text-align : left;
-	margin-top : -20px;
-	margin-right :60px;
+	margin-top : 20px;
+	margin-right :100px;
 	font-family: Montserrat, sans-serif;
 }
 
 .btt{
-	text-align : right;
-	margin-right :60px;
+	text-align : left;
+	margin-right :100px;
+	margin-top : 20px;
 	font-family: Montserrat, sans-serif;
 }
 
 .fourn{
+	text-align : left;
+	margin-right :100px;
+	margin-top : 20px;
 	font-family: Montserrat, sans-serif;
 }
