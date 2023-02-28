@@ -233,10 +233,10 @@ table{
 
 .analytics_graph {
   margin: 2rem;
-   background: #fff;
-   border-radius: 10px;
-   box-shadow: var(--shadow);
-   padding: 1rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
 }
 
 .cdd{
@@ -267,7 +267,7 @@ table{
         margin: 5px;
         font-family: Montserrat, sans-serif;
         margin-right :60px;
-        margin-top : 40px;
+        margin-top : 0px;
         margin-left : 0px;
       	}
    
