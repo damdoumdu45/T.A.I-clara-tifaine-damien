@@ -77,7 +77,7 @@
 #search_text:focus {
     background: rgb(64, 151, 119);
 }
-#search_button {
+#search_btn_enfer {
     border: 0 none;
     background: #1f7f5c url(search.png) center no-repeat;
     width: 60px;
@@ -147,11 +147,11 @@ table{
 
 
 .analytics_graph {
-    margin: 2rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: var(--shadow);
-    padding: 1rem;
+  margin: 2rem;
+   background: #fff;
+   border-radius: 10px;
+   box-shadow: var(--shadow);
+   padding: 1rem;
 }
 
 .cdd{
@@ -171,9 +171,46 @@ table{
 	font-family: Montserrat, sans-serif;
 }
 
-.btt{
-	text-align : right;
-	margin-right :60px;
-	font-family: Montserrat, sans-serif;
-    
-}
+
+.btn_enfer {
+    	display: inline-block;
+    	background-color: #555B61;
+       	border-radius: 10px;
+  	  	border: 4px double #cccccc;
+     	color: #eeeeee;
+   		text-align: center;
+   		font-size: 10px;
+   		padding: 10px;
+      	width: 200px;
+        transition: all 0.5s;
+   		cursor: pointer;
+        margin: 5px;
+        font-family: Montserrat, sans-serif;
+        margin-right :60px;
+        margin-top : 40px;
+      	}
+   
+.btn_enfer span {
+	       		cursor: pointer;
+	       		display: inline-block;
+	       		position: relative;
+	       		transition: 0.5s;
+	     	}
+.btn_enfer span:after {
+	       		content: "\00bb";
+	       		position: absolute;
+	       		opacity: 0;
+	       		top: 0;
+	       		right: -20px;
+	       		transition: 0.5s;
+	     	}
+.btn_enfer:hover {
+	       		background-color: #7F7F7F;
+	     	}
+.btn_enfer:hover span {
+	       		padding-right: 25px;
+	     	}
+.btn_enfer:hover span:after {
+	       		opacity: 1;
+	       		right: 0;
+	     	}
