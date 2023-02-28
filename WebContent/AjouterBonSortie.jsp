@@ -8,10 +8,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Ajouter un bon de sortie</title>
-<link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="ajouterBonEntree.css">
+
+<link href="" rel="stylesheet" type="text/css">    <link rel="stylesheet" href="styleAjoutProduit.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  
 <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+<script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -35,17 +37,17 @@
     <li id="search">
         <form action="" method="get">
             <input type="text" name="search_text" id="search_text" placeholder="Rechercher un article"/>
-            <input type="button" name="search_button" id="search_button"></a>
+            <!--  <input type="button" name="search_button" id="search_button">-->
+            <button id="search_button"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
         </form>
     </li>
     <li id="settings">
-        <a href="#"><img src="settings.png" /></a>
+        <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
     </li>
     <li id="settings">
-        <a href="#"><img src="bell1.png" /></a>
+        <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
-
 <table>
 	<tr>
 		<th>Code article</th>
@@ -67,7 +69,7 @@
 	</c:forEach>
 </table>
 
-
+<h1>Bon de sortie</h1>
 <div class="container">
 	<form action="sauvegarderDonnees" method="POST">
 		<div class="cdd">
