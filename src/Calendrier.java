@@ -1,6 +1,6 @@
-var currentDate = new Date();
+/*var currentDate = new Date();
 var currentMonth = currentDate.getMonth();
-var currentYear = currentDate.getFullYear();
+var currentYear = currentDate.getFullYear();*/
 
 public class Calendrier {
 
@@ -34,4 +34,5 @@ public class Calendrier {
 		}
 
 		fillCalendar(currentMonth, currentYear);
+}
 }
