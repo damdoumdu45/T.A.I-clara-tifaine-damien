@@ -17,7 +17,7 @@
 <div style="margin-top:30px;margin-bottom:30px" "class = "logo">
 <p style="text-align:center"><img src="logo.png" width="225px"></p>
 </div>
-<form style="text-align:center" action="MembreControleur" method="post">
+<form style="text-align:center" action="ConnexionControleur" method="get">
 <p>Adresse mail <input type="text" name="mail" /> <br /></p>
 <p>Mot de passe <input type="text" name="mdp" /> <br /></p>
 <p><input type="submit" /></p>
