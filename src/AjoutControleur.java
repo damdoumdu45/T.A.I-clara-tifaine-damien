@@ -68,6 +68,7 @@ public class AjoutControleur extends HttpServlet {
 		
 		AjoutDAOModele.creer(produit);
 
+		request.setAttribute("produit", produit);
 		
 		doGet(request, response);
 	}
