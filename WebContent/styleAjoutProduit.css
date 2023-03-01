@@ -238,6 +238,13 @@ h1 {
 	margin-top : -20px;
 	font-family: Montserrat, sans-serif;
 }
+
+.crit{
+	text-align : left ;
+	margin-right :20px;
+	margin-top : 20px;
+	font-family: Montserrat, sans-serif;
+}
 table{
 	border-collapse : collapse;
 }

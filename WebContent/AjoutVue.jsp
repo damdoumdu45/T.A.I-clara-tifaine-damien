@@ -98,6 +98,11 @@
     	<input type="text" id="fournisseur" name="fournisseur"><br>
     	</div>
     	
+<div class="crit">
+    	<label for="criticite">Criticite :</label>
+    	<input type="text" id="criticite" name="criticite"><br>
+    	</div>
+    	
 <!-- fournisseur : <input type="text" name="fournisseur" /> <br /> -->
 
 	    
