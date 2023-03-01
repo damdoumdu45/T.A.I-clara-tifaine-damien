@@ -32,7 +32,7 @@ public class AjoutControleur extends HttpServlet {
 		List<AjoutBeanModele> inventaireListe = AjoutDAOModele.lireListe();
 		request.setAttribute("inventaireListe", inventaireListe);
 
-		request.getRequestDispatcher("/AjoutVue.jsp").forward(request, response);
+		request.getRequestDispatcher("/Inventaire.jsp").forward(request, response);
 
 	}
 
