@@ -11,30 +11,30 @@ import java.util.List;
 public class AjoutDAOModele {
 
 	// CRUD: create(obj)
-	public int creer(AjoutBeanModele inventaire)
+	public int creer(AjoutBeanModele produit)
 	{
 		ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
 		Connection connexion = connexionBDDModele.getConnexion();
 
 		int resultat = -1;
 		try
-		{
-
-			String requete = new String("INSERT INTO inventaire (description, code_article, date_de_creation, fournisseur, regle) VALUES (?,?,?,?,?);");
+		{		
+			String requete = new String("INSERT INTO produit (description, code_article, date_de_creation, fournisseur, regle) VALUES (?,?,?,?,?);");
 			PreparedStatement statement = connexion.prepareStatement(requete,
 					Statement.RETURN_GENERATED_KEYS);
 
-			statement.setString(1, inventaire.getDescription());
-			statement.setString(2, inventaire.getCode_article());
-			statement.setString(3, inventaire.getDate_de_creation());
-			statement.setString(4, inventaire.getFournisseur());
-			statement.setString(5, inventaire.getRegle());
+			statement.setString(1, produit.getDescription());
+			statement.setString(2, produit.getCode_article());
+			statement.setString(3, produit.getDate_de_creation());
+			statement.setString(4, produit.getFournisseur());
+			statement.setInt(5, produit.getRegle());
+			statement.setInt(6, produit.getCriticite().getId());
 
 			statement.executeUpdate();
 			ResultSet rs = statement.getGeneratedKeys();
 			if (rs.next()) {
 				resultat = rs.getInt(1);
-				inventaire.setId(resultat);
+				produit.setId(resultat);
 			}
 			else 
 				resultat = -1;
@@ -63,26 +63,28 @@ public class AjoutDAOModele {
 		ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
 		Connection connexion = connexionBDDModele.getConnexion();
 
-		List<AjoutBeanModele> inventaireListe = new ArrayList<AjoutBeanModele>();		
+		List<AjoutBeanModele> produitListe = new ArrayList<AjoutBeanModele>();		
 
 		try
 		{
-			String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle FROM inventaire;");
+			String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur,id_criticite regle FROM produit;");
 			Statement statement = connexion.createStatement();
 			ResultSet rs = statement.executeQuery(requete);
+			CriticiteDAOModele criticiteDAOModele = new CriticiteDAOModele();
 
 			while ( rs.next() )
 			{
-				AjoutBeanModele inventaire = new AjoutBeanModele();
-				inventaire.setId(rs.getInt("id"));
-				inventaire.setDescription(rs.getString("description"));
-				inventaire.setCode_article(rs.getString("code_article"));
-				inventaire.setDate_de_creation(rs.getString("date_de_creation"));
-				inventaire.setFournisseur(rs.getString("fournisseur"));
-				inventaire.setDescription(rs.getString("regle"));
+				AjoutBeanModele produit = new AjoutBeanModele();
+				produit.setId(rs.getInt("id"));
+				produit.setDescription(rs.getString("description"));
+				produit.setCode_article(rs.getString("code_article"));
+				produit.setDate_de_creation(rs.getString("date_de_creation"));
+				produit.setFournisseur(rs.getString("fournisseur"));
+				produit.setDescription(rs.getString("regle"));
+				produit.setCriticite(criticiteDAOModele.lire(rs.getInt("id_criticite")));
 				
 
-				inventaireListe.add(inventaire);
+				produitListe.add(produit);
 			}
 		}
 		catch (SQLException ex3)
@@ -99,27 +101,30 @@ public class AjoutDAOModele {
 		{
 			connexionBDDModele.fermerConnexion();
 		}
-		return inventaireListe;
+		return produitListe;
 	}
 	public AjoutBeanModele lire(int id)
     {
         ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
         Connection connexion = connexionBDDModele.getConnexion();
-        AjoutBeanModele inventaire = new AjoutBeanModele();
+        AjoutBeanModele produit = new AjoutBeanModele();
         try
         {
-            String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle FROM inventaire WHERE id=?;");
+            String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle FROM produit WHERE id=?;");
             PreparedStatement statement = connexion.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);
             statement.setInt(1, id);
             ResultSet rs = statement.executeQuery();
+            CriticiteDAOModele criticiteDAOModele = new CriticiteDAOModele();
+            
             while ( rs.next() )
             {
-            	inventaire.setId(rs.getInt("id"));
-				inventaire.setDescription(rs.getString("description"));
-				inventaire.setCode_article(rs.getString("code_article"));
-				inventaire.setDate_de_creation(rs.getString("date_de_creation"));
-				inventaire.setFournisseur(rs.getString("fournisseur"));
-				inventaire.setDescription(rs.getString("regle"));
+            	produit.setId(rs.getInt("id"));
+				produit.setDescription(rs.getString("description"));
+				produit.setCode_article(rs.getString("code_article"));
+				produit.setDate_de_creation(rs.getString("date_de_creation"));
+				produit.setFournisseur(rs.getString("fournisseur"));
+				produit.setRegle(rs.getInt("regle"));
+				produit.setCriticite(criticiteDAOModele.lire(rs.getInt("id_criticite")));
             }
         }
         catch (SQLException ex3)
@@ -136,6 +141,6 @@ public class AjoutDAOModele {
         {
             connexionBDDModele.fermerConnexion();
         }
-        return inventaire;
+        return produit;
     }
 }

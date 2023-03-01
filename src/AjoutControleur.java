@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class inventairesControleur
+ * Servlet implementation class produitsControleur
  */
 @WebServlet("/AjoutControleur")
 public class AjoutControleur extends HttpServlet {
@@ -28,11 +28,17 @@ public class AjoutControleur extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		AjoutDAOModele AjoutDAOModele = new AjoutDAOModele();
-		List<AjoutBeanModele> inventaireListe = AjoutDAOModele.lireListe();
-		request.setAttribute("inventaireListe", inventaireListe);
+		AjoutDAOModele ajoutDAOModele = new AjoutDAOModele();
+		CriticiteDAOModele criticiteDAOModele = new CriticiteDAOModele();
+		
+		List<AjoutBeanModele> produitListe = ajoutDAOModele.lireListe();
+		request.setAttribute("produitListe", produitListe);
+		
+		List<CriticiteBeanModele> criticiteListe = criticiteDAOModele.lireListe();
+		request.setAttribute("criticiteListe", criticiteListe);
 
 		request.getRequestDispatcher("/Inventaire.jsp").forward(request, response);
+		request.getRequestDispatcher("/AjoutVue.jsp").forward(request, response);
 
 	}
 
@@ -46,16 +52,21 @@ public class AjoutControleur extends HttpServlet {
 		String code_article = request.getParameter("code_article");
 		String date_de_creation = request.getParameter("date_de_creation");
 		String regle = request.getParameter("regle");
+		String criticite = request.getParameter("criticite");
 		
-		AjoutBeanModele inventaire= new AjoutBeanModele();
-		inventaire.setDescription(description);
-		inventaire.setFournisseur(fournisseur);
-		inventaire.setCode_article(code_article);
-		inventaire.setDate_de_creation(date_de_creation);
-		inventaire.setRegle(regle);
-		
+		AjoutBeanModele produit= new AjoutBeanModele();
 		AjoutDAOModele AjoutDAOModele = new AjoutDAOModele();
-		AjoutDAOModele.creer(inventaire);
+		CriticiteDAOModele criticiteDAOModele=new CriticiteDAOModele();
+		
+		produit.setDescription(description);
+		produit.setFournisseur(fournisseur);
+		produit.setCode_article(code_article);
+		produit.setDate_de_creation(date_de_creation);
+		produit.setRegle(Integer.parseInt(regle));
+		produit.setCriticite(criticiteDAOModele.lire(Integer.parseInt(criticite)));
+		
+		
+		AjoutDAOModele.creer(produit);
 
 		
 		doGet(request, response);

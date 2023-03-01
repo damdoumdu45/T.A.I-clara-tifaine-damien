@@ -7,8 +7,8 @@ public class AjoutBeanModele {
 	private String fournisseur;
 	private int regle;
 	private CriticiteBeanModele criticite;
-	private HistoriqueBeanModele historique;
 	
+
 	public CriticiteBeanModele getCriticite() {
 		return criticite;
 	}
@@ -17,9 +17,6 @@ public class AjoutBeanModele {
 		this.criticite = criticite;
 	}
 
-	public void setRegle(int regle) {
-		this.regle = regle;
-	}
 
 	public AjoutBeanModele() {
 		
@@ -66,11 +63,11 @@ public class AjoutBeanModele {
 		this.fournisseur = fournisseur;
 	}
 
-	public String getRegle() {
+	public int getRegle() {
 		return regle;
 	}
 
-	public void setRegle(String regle) {
+	public void setRegle(int regle) {
 		this.regle = regle;
 	}
 
