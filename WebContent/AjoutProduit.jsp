@@ -49,10 +49,10 @@
 </ul>
 
 <h1>Ajout d'un nouveau produit</h1>
-
+<form action="AjoutControleur" method="post">
 
 <div class="container">
-	<form action="sauvegarderDonnees" method="POST">
+	<!-- <form action="sauvegarderDonnees" method="POST"> -->
 		<div class="cdd">
     	<label for="code_article">Code article :</label>
     	<input type="text" id="code_article" name="code_article"><br>
@@ -64,8 +64,8 @@
     	</div>
   
   		<div class="dtcrea">
-    	<label for="date_creation">Date de création :</label>     
-    	<input type="date" id="datepicker">    
+    	<label for="date_de_creation">Date de création :</label>     
+    	<input type="text" id="datepicker">    
     	<script>    
     		$(function() {
     			$("#datepicker").datepicker();
@@ -85,8 +85,8 @@
   
     
     <input type="submit" class="btn_enfer" value="Enregistrer et fermer" onclick="window.location.href='Inventaire.jsp'">
+</div>   
 	</form>
-</div>
 
 
 

@@ -5,27 +5,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<script src="https://kit.fontawesome.com/449d8f2d0f.js" crossorigin="anonymous"></script>
+<title>Ajouter un produit</title>
+<link rel="stylesheet" type="text/css" href="styleAjoutProduit.css" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>  
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">  
+<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
 </head>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
+<link rel="stylesheet" type="text/css" href="styleAjoutProduit.css" />
 
 <body>
 
 <ul class="nav">
 	<li>
-        <a href="Accueil">Accueil</a>
+        <a href="#" onclick="window.location.href='Accueil.jsp'">Accueil</a>
     </li>
     <li>
-        <a href="#">Ajout</a>
+        <a href="#" onclick="window.location.href='AjoutProduit.jsp'">Ajout</a>
     </li>
     <li>
-        <a href="#">Inventaire</a>
+        <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>
     </li>
     <li id="options">
         <a href="#">Calendrier</a>
         <ul class="subnav">
-            <li><a href="#">Calendrier des inventaires</a></li>
-            <li><a href="#">Historique des entrées/sorties</a></li>
+            <li><a href="#" onclick="window.location.href='Calendrier.jsp'" >Calendrier des inventaires</a></li>
+            <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
         </ul>
     </li>
      <div class="search">
@@ -39,49 +45,70 @@
     		</button>
 	</div>
     <li id="settings">
-        <a href="#"><img src="settings.png" /></a>
+        <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
     </li>
     <li id="settings">
-        <a href="#"><img src="bell1.png" /></a>
+        <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
 
-<h2>Les employés</h2>
-<h3>Ajouter un nouvel employé</h3>
+<h1>Ajout d'un nouveau produit</h1>
 
 <form action="AjoutControleur" method="post">
 
-description : <input type="text" name="description" /> <br />
-code_article : <input type="text" name="code_article" /> <br />
-date_de_creation : <input type="text" name="date_de_creation" /> <br />
-fournisseur : <input type="text" name="fournisseur" /> <br />
-regle : <input type="text" name="regle" /> <br />
+<div class="container">
 
-<input type="submit" />
+<div class="cdd">
+    	<label for="code_article">Code article :</label>
+    	<input type="text" id="code_article" name="code_article"><br>
+    	</div>
+    	
+<div class="dpt">
+    	<label for="description">Description:</label>
+    	<input type="text" id="description" name="description"><br>
+    	</div>
+    	
+<!-- description : <input type="text" name="description" /> <br /> -->
+
+
+    	
+<!-- code_article : <input type="text" name="code_article" /> <br /> -->
+
+<div class="dtcrea">
+    	<label for="date_de_creation">Date de création :</label>     
+    	<input type="text" id="datepicker" name="date_de_creation">    
+    	<script>    
+    		$(function() {
+    			$("#datepicker").datepicker();
+    		});
+  		</script>
+    	</div>
+    	
+<!-- date_de_creation : <input type="text" name="date_de_creation" /> <br /> -->
+
+<div class="regle">
+    	<label for="regle">Règle :</label>
+	    <input type="text" id="regle" name="regle"><br>
+	    </div>
+	    
+<div class="fourn">
+    	<label for="fournisseur">Fournisseur :</label>
+    	<input type="text" id="fournisseur" name="fournisseur"><br>
+    	</div>
+    	
+<!-- fournisseur : <input type="text" name="fournisseur" /> <br /> -->
+
+	    
+<!-- regle : <input type="text" name="regle" /> <br /> -->
+
+<input type="submit" class="btn_enfer" value="Enregistrer et fermer" onclick="window.location.href='Inventaire.jsp'">
+
+<!-- <input type="submit" /> -->
+</div>
 </form>
 
-<%-- <table>
 
-<tr>
-<th>id</th>
-<th>description</th>
-<th>code_article</th>
-<th>date_de_creation</th>
-<th>fournisseur</th>
-<th>regle</th>
-</tr>
 
-<c:forEach items="${employeListe}" var="inventaire">
-<tr>
-<td><c:out value="${inventaire.id}" /> </td>
-<td><c:out value="${inventaire.description}" /> </td>
-<td><c:out value="${inventaire.code_article}" /></td>
-<td><c:out value="${inventaire.date_de_creation}" /></td>
-<td><c:out value="${inventaire.fournisseur}" /></td>
-<td><c:out value="${inventaire.regle}" /></td>
-</tr>
-</c:forEach>
-</table> --%>
 
 </body>
 </html>
