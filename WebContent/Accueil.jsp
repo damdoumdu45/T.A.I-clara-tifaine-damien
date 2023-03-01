@@ -60,7 +60,7 @@
 		</div>
 	</div>
 	<div class="card emails-card">
-	<div class="titre2">
+	<div class="titre1">
 			Pourcentage de place disponible dans le stock
 		</div>
 	<div class="card emails-card">

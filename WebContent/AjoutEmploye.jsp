@@ -13,7 +13,11 @@
 	<form style="text-align:center" action="MembreControleur" method="post">
 		<p class ="jiji">Adresse mail </p><input type="text" name="mail" /> <br />
 		<p class="jiji">Mot de passe</p><input class="popo" type="text" name="mdp" /> <br />
-		<input class="btn_co" type="submit" />
+		<input class="btn_co" type="submit" onclick="alert('Nouvel employé ajouté')"/>
+		
+		
+		<a class="btn_re" href="#" onclick="window.location.href='pageConnexion.jsp'">Retour</a>
+	
 	</form>
 </div>
 
