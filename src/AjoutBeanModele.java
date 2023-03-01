@@ -1,4 +1,3 @@
-
 public class AjoutBeanModele {
 	
 	private int id;
@@ -63,4 +62,3 @@ public class AjoutBeanModele {
 
 
 }
-
