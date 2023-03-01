@@ -11,7 +11,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    border-radius : 10px;
+    
 }
 
 .nav li {
@@ -42,6 +42,7 @@
     font-size: 10px;
     line-height: 24px;
 }
+
 
 .search {
   display: flex;
@@ -96,7 +97,6 @@
   width: 1.3em;
   fill: #b4b4b4;
 }
-
 
 
 #options a{
