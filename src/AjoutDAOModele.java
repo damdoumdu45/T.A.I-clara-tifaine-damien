@@ -19,7 +19,7 @@ public class AjoutDAOModele {
 		int resultat = -1;
 		try
 		{		
-			String requete = new String("INSERT INTO produit (description, code_article, date_de_creation, fournisseur, regle) VALUES (?,?,?,?,?);");
+			String requete = new String("INSERT INTO produit (description, code_article, date_de_creation, fournisseur, regle, quantite, id_criticite) VALUES (?,?,?,?,?,?,?);");
 			PreparedStatement statement = connexion.prepareStatement(requete,
 					Statement.RETURN_GENERATED_KEYS);
 
@@ -28,7 +28,8 @@ public class AjoutDAOModele {
 			statement.setString(3, produit.getDate_de_creation());
 			statement.setString(4, produit.getFournisseur());
 			statement.setInt(5, produit.getRegle());
-			statement.setInt(6, produit.getCriticite().getId());
+			statement.setInt(6, produit.getQuantite());
+			statement.setInt(7, produit.getCriticite().getId());
 
 			statement.executeUpdate();
 			ResultSet rs = statement.getGeneratedKeys();
@@ -67,7 +68,7 @@ public class AjoutDAOModele {
 
 		try
 		{
-			String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle, id_criticite  FROM produit;");
+			String requete = new String("SELECT id, description, code_article, quantite, date_de_creation, fournisseur, regle, id_criticite  FROM produit;");
 			Statement statement = connexion.createStatement();
 			ResultSet rs = statement.executeQuery(requete);
 			CriticiteDAOModele criticiteDAOModele = new CriticiteDAOModele();
@@ -81,6 +82,7 @@ public class AjoutDAOModele {
 				produit.setDate_de_creation(rs.getString("date_de_creation"));
 				produit.setFournisseur(rs.getString("fournisseur"));
 				produit.setRegle(rs.getInt("regle"));
+				produit.setQuantite(rs.getInt("quantite"));
 				produit.setCriticite(criticiteDAOModele.lire(rs.getInt("id_criticite")));
 				
 
@@ -110,7 +112,7 @@ public class AjoutDAOModele {
         AjoutBeanModele produit = new AjoutBeanModele();
         try
         {
-            String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle, id_criticite FROM produit WHERE id=?;");
+            String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, quantite, regle, id_criticite FROM produit WHERE id=?;");
             PreparedStatement statement = connexion.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);
             /*statement.setInt(1, id);*/
             ResultSet rs = statement.executeQuery();
@@ -124,6 +126,7 @@ public class AjoutDAOModele {
 				produit.setDate_de_creation(rs.getString("date_de_creation"));
 				produit.setFournisseur(rs.getString("fournisseur"));
 				produit.setRegle(rs.getInt("regle"));
+				produit.setRegle(rs.getInt("quantite"));
 				produit.setCriticite(criticiteDAOModele.lire(rs.getInt("id_criticite")));
             }
         }

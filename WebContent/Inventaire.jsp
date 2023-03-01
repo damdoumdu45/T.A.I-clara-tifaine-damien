@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 	
-<%--@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" prefix="c" --%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -19,7 +19,7 @@
         <a href="#" onclick="window.location.href='Accueil.jsp'">Accueil</a>
     </li>
     <li>
-        <a href="#" onclick="window.location.href='AjoutProduit.jsp'">Ajout</a>
+        <a href="#" onclick="window.location.href='AjoutVue.jsp'">Ajout</a>
     </li>
     <li>
         <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>
@@ -69,40 +69,21 @@
     </tr>
   </thead>
   <tbody>
+  <c:forEach items="${produitListe}" var="produit">
     <tr>
       <th scope="row" style="text-align:center"><input type="checkbox"></th>
-      <td>Mark</td>
-      <td>Mark</td>
-      <td>Mark</td>
+      <td><c:out value="${produit.code_article}" /></td>
+      <td><c:out value="${produit.description}" /></td>
+      <td><c:out value="${produit.quantite}" /></td>
       <td><c:forEach items="${criticiteListe}" var="criticité">
 		<option value="${criticite.id}">${role.nom}</option>
 		</c:forEach></td>
-      <td>Mark</td>
-      <td>Mark</td>
+      <td><c:out value="${produit.regle}" /></td>
+      <td>a voir</td>
       <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
-      <td>@mdo</td>
+      <td>a voir</td>
     </tr>
-    <tr>
-      <th scope="row"style="text-align:center"><input type="checkbox"></th>
-      <td>Jacob</td>
-      <td>Mark</td>
-      <td>Mark</td>
-      <td>Mark</td>
-      <td>Mark</td>
-      <td>Mark</td>
-      <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row"style="text-align:center"><input type="checkbox"></th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-      <td>Mark</td>
-      <td>Mark</td>
-      <td>Mark</td>
-      <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
-      <td>Mark</td>
-    </tr>
+    </c:forEach>
   </tbody>
 </table>
 </div>

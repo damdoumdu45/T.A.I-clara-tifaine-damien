@@ -19,7 +19,7 @@
         <a href="#" onclick="window.location.href='Accueil.jsp'">Accueil</a>
     </li>
     <li>
-        <a href="#" onclick="window.location.href='AjoutProduit.jsp'">Ajout</a>
+        <a href="#" onclick="window.location.href='Ajoutvue.jsp'">Ajout</a>
     </li>
     <li>
         <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>

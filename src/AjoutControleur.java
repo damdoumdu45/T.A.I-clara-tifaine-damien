@@ -52,10 +52,11 @@ public class AjoutControleur extends HttpServlet {
 		String code_article = request.getParameter("code_article");
 		String date_de_creation = request.getParameter("date_de_creation");
 		String regle = request.getParameter("regle");
+		String quantite = request.getParameter("quantite");
 		String criticite = request.getParameter("criticite");
 		
 		AjoutBeanModele produit= new AjoutBeanModele();
-		AjoutDAOModele AjoutDAOModele = new AjoutDAOModele();
+		AjoutDAOModele ajoutDAOModele = new AjoutDAOModele();
 		CriticiteDAOModele criticiteDAOModele=new CriticiteDAOModele();
 		
 		produit.setDescription(description);
@@ -63,10 +64,11 @@ public class AjoutControleur extends HttpServlet {
 		produit.setCode_article(code_article);
 		produit.setDate_de_creation(date_de_creation);
 		produit.setRegle(Integer.parseInt(regle));
+		produit.setRegle(Integer.parseInt(quantite));
 		produit.setCriticite(criticiteDAOModele.lire(Integer.parseInt(criticite)));
 		
 		
-		AjoutDAOModele.creer(produit);
+		ajoutDAOModele.creer(produit);
 
 		request.setAttribute("produit", produit);
 		

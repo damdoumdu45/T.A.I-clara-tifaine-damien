@@ -6,6 +6,17 @@ public class AjoutBeanModele {
 	private String date_de_creation;
 	private String fournisseur;
 	private int regle;
+	private int quantite;
+	
+	
+	public int getQuantite() {
+		return quantite;
+	}
+
+	public void setQuantite(int quantite) {
+		this.quantite = quantite;
+	}
+
 	private CriticiteBeanModele criticite;
 	
 

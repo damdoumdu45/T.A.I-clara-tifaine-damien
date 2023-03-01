@@ -22,7 +22,7 @@
         <a href="#" onclick="window.location.href='Accueil.jsp'">Accueil</a>
     </li>
     <li>
-        <a href="#" onclick="window.location.href='AjoutProduit.jsp'">Ajout</a>
+        <a href="#" onclick="window.location.href='AjoutVue.jsp'">Ajout</a>
     </li>
     <li>
         <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>
@@ -92,6 +92,12 @@
     	<label for="regle">Règle :</label>
 	    <input type="text" id="regle" name="regle"><br>
 	    </div>
+	    
+<div class="cdd">
+    	<label for="quantite">Quantité :</label>
+	    <input type="text" id="quantite" name="quantite"><br>
+	    </div>
+	    
 	    
 <div class="fourn">
     	<label for="fournisseur">Fournisseur :</label>
