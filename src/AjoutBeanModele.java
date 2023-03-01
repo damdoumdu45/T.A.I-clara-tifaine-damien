@@ -5,8 +5,22 @@ public class AjoutBeanModele {
 	private String description;
 	private String date_de_creation;
 	private String fournisseur;
-	private String regle;
+	private int regle;
+	private CriticiteBeanModele criticite;
+	private HistoriqueBeanModele historique;
 	
+	public CriticiteBeanModele getCriticite() {
+		return criticite;
+	}
+
+	public void setCriticite(CriticiteBeanModele criticite) {
+		this.criticite = criticite;
+	}
+
+	public void setRegle(int regle) {
+		this.regle = regle;
+	}
+
 	public AjoutBeanModele() {
 		
 	}
