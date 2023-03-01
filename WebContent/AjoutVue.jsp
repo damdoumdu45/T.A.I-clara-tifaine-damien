@@ -34,6 +34,7 @@
             <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
         </ul>
     </li>
+
      <div class="search">
     	<input type="text" class="search__input" placeholder="Rechercher">
     		<button class="search__button">
@@ -44,10 +45,18 @@
         		</svg>
     		</button>
 	</div>
+
+    <li id="search">
+        <form action="" method="get">
+            <input type="text" name="search_text" id="search_text" placeholder="Rechercher un article"/>
+            <!--  <input type="button" name="search_button" id="search_button">-->
+            <button id="search_button"><i class="fa-solid fa-magnifying-glass fa-2xl"></i></button>
+        </form>
+    </li>
+
     <li id="settings">
         <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
     </li>
-    
     <li id="settings">
         <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
