@@ -30,8 +30,8 @@
             <li><a href="#" onclick="window.location.href='Calendrier.jsp'" >Calendrier des inventaires</a></li>
             <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
         </ul>
-     </li>
-     <div class="search">
+    </li>
+    <div class="search">
     	<input type="text" class="search__input" placeholder="Rechercher">
     		<button class="search__button">
         		<svg class="search__icon" aria-hidden="true" viewBox="0 0 24 24">
@@ -43,7 +43,11 @@
 	</div>
     <li id="settings">
         <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
+        <ul class="submenu">
+            <li ><a style="font-size:16px; transform: translateY(-10px);" href="#" onclick="window.location.href='pageConnexion.jsp'" >Déconnexion</a></li>
+        </ul>
     </li>
+    
     <li id="settings">
         <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>

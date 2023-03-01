@@ -133,6 +133,50 @@
 }
 
 
+
+.nav .submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background-color: #232323;
+  border: 1px solid #ccc;
+}
+
+.nav li:hover > .submenu {
+  display: block;
+}
+
+.nav .submenu li {
+  display: block;
+}
+
+.nav .submenu li a {
+  display: block;
+  font-size: 16px;
+  color: white;
+  line-height: 60px;
+  padding: 0px 24px;
+  text-decoration: none;
+  border-left: 1px solid #2e2e2e;
+  font-family: Montserrat, sans-serif;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  
+  
+}
+
+.nav .submenu li:hover {
+  background-color: #232323;
+}
+
+
+
+
+
+
 .analytics {
 	margin: 1rem;
 	display: grid;
