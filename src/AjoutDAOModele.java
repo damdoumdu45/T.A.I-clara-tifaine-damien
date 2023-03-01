@@ -1,4 +1,3 @@
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -6,6 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+
 
 //DAO pour CRUD (create, read, update, delete)
 public class AjoutDAOModele {
@@ -67,7 +67,7 @@ public class AjoutDAOModele {
 
 		try
 		{
-			String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur,id_criticite regle FROM produit;");
+			String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle, id_criticite  FROM produit;");
 			Statement statement = connexion.createStatement();
 			ResultSet rs = statement.executeQuery(requete);
 			CriticiteDAOModele criticiteDAOModele = new CriticiteDAOModele();
@@ -80,7 +80,7 @@ public class AjoutDAOModele {
 				produit.setCode_article(rs.getString("code_article"));
 				produit.setDate_de_creation(rs.getString("date_de_creation"));
 				produit.setFournisseur(rs.getString("fournisseur"));
-				produit.setDescription(rs.getString("regle"));
+				produit.setRegle(rs.getInt("regle"));
 				produit.setCriticite(criticiteDAOModele.lire(rs.getInt("id_criticite")));
 				
 
@@ -110,9 +110,9 @@ public class AjoutDAOModele {
         AjoutBeanModele produit = new AjoutBeanModele();
         try
         {
-            String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle FROM produit WHERE id=?;");
+            String requete = new String("SELECT id, description, code_article, date_de_creation, fournisseur, regle, id_criticite FROM produit WHERE id=?;");
             PreparedStatement statement = connexion.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);
-            statement.setInt(1, id);
+            /*statement.setInt(1, id);*/
             ResultSet rs = statement.executeQuery();
             CriticiteDAOModele criticiteDAOModele = new CriticiteDAOModele();
             

@@ -95,7 +95,7 @@ public class CriticiteDAOModele {
 			ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
 			Connection connexion = connexionBDDModele.getConnexion();
 
-			CriticiteBeanModele Criticite = new CriticiteBeanModele();
+			CriticiteBeanModele criticite = new CriticiteBeanModele();
 			try
 			{
 				String requete = new String("SELECT id, criticite FROM criticite WHERE id = ?;");
@@ -106,9 +106,9 @@ public class CriticiteDAOModele {
 
 				if ( rs.next() )
 				{
-					Criticite = new CriticiteBeanModele();
-					Criticite.setId(id);
-					Criticite.setCriticite(rs.getString("criticite"));
+					criticite = new CriticiteBeanModele();
+					criticite.setId(id);
+					criticite.setCriticite(rs.getString("criticite"));
 				}
 			}
 			catch (SQLException ex3)
@@ -121,7 +121,7 @@ public class CriticiteDAOModele {
 					ex3=ex3.getNextException();
 				}
 			}
-			return Criticite;
+			return criticite;
 		}
 
 

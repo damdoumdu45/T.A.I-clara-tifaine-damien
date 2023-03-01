@@ -100,7 +100,11 @@
     	
 <div class="crit">
     	<label for="criticite">Criticite :</label>
-    	<input type="text" id="criticite" name="criticite"><br>
+    	<select name="criticite">
+			<c:forEach items="${criticiteListe}" var="criticite">
+				<option value="${criticite.id}">${criticite.nom}</option>
+			</c:forEach>
+		</select>
     	</div>
     	
 <!-- fournisseur : <input type="text" name="fournisseur" /> <br /> -->
