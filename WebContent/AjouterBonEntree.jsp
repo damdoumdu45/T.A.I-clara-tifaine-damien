@@ -1,6 +1,7 @@
 
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 	
 <%-- <%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> --%>
 	
@@ -119,6 +120,15 @@
     		});
   		</script>
   		</div>
+  		
+  		<div class="crit">
+    	<label for="criticite">Criticite :</label>
+    	<select name="criticite">
+			<c:forEach items="${criticiteListe}" var="criticite">
+				<option value="${criticite.id}">"${criticite.criticite}"</option>
+			</c:forEach>
+		</select>
+    	</div>
     </form>
     	
     	<button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer</button>
