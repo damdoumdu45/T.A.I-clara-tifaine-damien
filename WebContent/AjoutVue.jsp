@@ -78,7 +78,7 @@
 
 <div class="dtcrea">
     	<label for="date_de_creation">Date de création :</label>     
-    	<input type="text" id="datepicker" name="date_de_creation">    
+    	<input type="text" id="datepicker" name="date_de_creation"><br>    
     	<script>    
     		$(function() {
     			$("#datepicker").datepicker();
