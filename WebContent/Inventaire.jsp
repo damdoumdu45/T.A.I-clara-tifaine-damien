@@ -49,7 +49,7 @@
     </li>
     
     <li id="settings">
-        <a href="#"><i class="fa-solid fa-bell fa-2xl"></i></a>
+        <a href="#" onclick="window.location.href='index.html'"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
 </ul>
 <h1>Inventaire</h1>
