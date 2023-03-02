@@ -63,7 +63,7 @@ public class AjoutControleur extends HttpServlet {
 		produit.setCode_article(code_article);
 		produit.setDate_de_creation(date_de_creation);
 		produit.setRegle(Integer.parseInt(regle));
-		produit.setRegle(Integer.parseInt(quantite));
+		produit.setQuantite(Integer.parseInt(quantite));
 		System.out.println(criticite);
 		produit.setCriticite(criticiteDAOModele.lire(Integer.parseInt(criticite)));
 		

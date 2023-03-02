@@ -25,7 +25,7 @@
         <a href="#" onclick="window.location.href='AjoutControleur'">Ajout</a>
     </li>
     <li>
-        <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>
+        <a href="#" onclick="window.location.href='InventaireControleur'">Inventaire</a>
     </li>
     <li id="options">
         <a href="#">Calendrier</a>
