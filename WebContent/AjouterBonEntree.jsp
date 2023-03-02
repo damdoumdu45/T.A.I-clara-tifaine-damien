@@ -67,8 +67,8 @@
     </li>
 </ul>
 
-<div class="analytics_graph">
-<table class="table table-striped table-hover">
+<!--<div class="analytics_graph">
+ <table class="table table-striped table-hover">
   <thead>b
     <tr>
       <th scope="col">Code article</th>
@@ -91,7 +91,7 @@
     
   </tbody>
 </table>
-</div>
+</div> -->
 
 
 <h1>Bon d'entrée</h1>

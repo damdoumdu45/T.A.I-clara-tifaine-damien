@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class produitsControleur
  */
-@WebServlet("/AjoutBonEntree")
-public class AjoutBonEntree extends HttpServlet {
+@WebServlet("/AjoutBonSortie")
+public class AjoutBonSortie extends HttpServlet {
 	private static final long serialVersionUID = 1L; 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AjoutBonEntree() {
+    public AjoutBonSortie() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,7 +37,7 @@ public class AjoutBonEntree extends HttpServlet {
 		List<CriticiteBeanModele> criticiteListe = criticiteDAOModele.lireListe();
 		request.setAttribute("criticiteListe", criticiteListe);
 
-		request.getRequestDispatcher("/AjouterBonEntree.jsp").forward(request, response);
+		request.getRequestDispatcher("/AjouterBonSortie.jsp").forward(request, response);
 
 	}
 
@@ -57,7 +57,7 @@ public class AjoutBonEntree extends HttpServlet {
 		produit.setCode_article(code_article);
 		produit.setQuantite(quantite);
 		
-		quantite+= ajoutDAOModele.lireQuantite(Integer.parseInt(code_article));
+		quantite= ajoutDAOModele.lireQuantite(Integer.parseInt(code_article))- quantite;
 		System.out.println(quantite);
 		ajoutDAOModele.modifierQuantite(quantite, Integer.parseInt(id_criticite), Integer.parseInt(code_article));
 

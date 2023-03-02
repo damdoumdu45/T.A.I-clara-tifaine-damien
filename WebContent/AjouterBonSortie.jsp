@@ -57,7 +57,7 @@
 </ul>
 
 
-<div class="analytics_graph">
+<!--  <div class="analytics_graph">
 <table class="table table-striped table-hover">
   <thead>
     <tr>
@@ -81,11 +81,11 @@
     
   </tbody>
 </table>
-</div>
+</div>-->
 
 <h1>Bon de sortie</h1>
 <div class="container">
-	<form action="sauvegarderDonnees" method="POST">
+	<form action="AjoutBonSortie" method="POST">
 		<div class="cdd">
     	<label for="code_article">Code article :</label>
     	<input type="text" id="code_article" name="code_article"><br>
@@ -96,7 +96,7 @@
     	<input type="text" id="quantite" name="quantite"><br>
     	</div>
     	
-    	<div class="dtcrea">
+    	<!--  <div class="dtcrea">
     	<form>    
     		<label for="datepicker">Sélectionnez une date :</label>    
     		<input type="date" id="datepicker">  
@@ -106,13 +106,23 @@
     			$("#datepicker").datepicker();
     		});
   		</script>
-  		</div>
+  		</div>-->
+  		
+  		<div class="crit">
+    	<label for="criticite">Criticite :</label>
+    	<select name="id_criticite">
+				<option value="1">NORMAL</option>
+				<option value="2">EN COURS DE COMMANDE</option>
+				<option value="3">CRITIQUE</option>
+		</select>
+    	</div>
+    	
+    	<button class="btn_enfer" type="submit">Enregistrer et fermer</button>
     </form>
     	
-    	<button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer</button>
+
     	
-        
-	</form>
+
 
 </body>
 </html>

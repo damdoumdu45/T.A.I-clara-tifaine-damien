@@ -77,8 +77,8 @@
       <td><c:out value="${produit.quantite}" /></td>
       <td><c:out value="${produit.criticite.criticite}" /></td>
       <td><c:out value="${produit.regle}" /></td>
-      <td>date du dernier inventaire</td>
-      <td><button class="btn-entree" onclick="window.location.href='AjoutBonEntree'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
+      <td><c:out value="${produit.date_de_creation}" /></td>
+      <td><button class="btn-entree" onclick="window.location.href='AjoutBonEntree'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjoutBonSortie'"><b>-</b></button></td>
       <td>indice de confiance</td>
     </tr>
     </c:forEach>

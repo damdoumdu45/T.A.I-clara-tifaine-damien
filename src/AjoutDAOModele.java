@@ -156,7 +156,7 @@ public class AjoutDAOModele {
         {
             String requete = new String("SELECT quantite FROM produit WHERE code_article=?;");
             PreparedStatement statement = connexion.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);
-            /*statement.setInt(1, id);*/
+            statement.setInt(1, code_article);
             ResultSet rs = statement.executeQuery();
             
             while ( rs.next() )
@@ -187,13 +187,16 @@ public class AjoutDAOModele {
         Connection connexion = connexionBDDModele.getConnexion();
         int resultat = -1;
         try        {
-            String requete = new String("UPDATE produit SET quantite = ?, code_article = ?, id_criticite = ? WHERE ID = ?;");
-            PreparedStatement statement = connexion.prepareStatement(requete);
+            String requete = new String("UPDATE produit SET quantite = ?, id_criticite = ? WHERE code_article = ?;");
+            PreparedStatement statement = connexion.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);
             statement.setInt(1, quantite);
             statement.setInt(2, id_criticite);
+            statement.setInt(3, code_article);
             statement.executeUpdate();
-            ResultSet rs = statement.executeQuery();
+            /*ResultSet rs = statement.executeQuery();*/
+            ResultSet rs = statement.getGeneratedKeys();
             if (rs.next()) {
+            	System.out.println("HW");
                 resultat = rs.getInt(1);
             }
             else                
