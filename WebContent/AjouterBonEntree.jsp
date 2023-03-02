@@ -98,7 +98,7 @@
 
 <div class="analytics_graph">
 	
-	<form action="sauvegarderDonnees" method="POST">
+	<form action="AjoutBonEntree" method="POST">
 		<div class="cdd">
     	<label for="code_article">Code article :</label>
     	<input type="text" id="code_article" name="code_article"><br>
@@ -109,7 +109,7 @@
     	<input type="text" id="quantite" name="quantite"><br>
     	</div>
     	
-    	<div class="dtcrea">
+    	<!--  <div class="dtcrea">
     	
     	<form>    
     		<label for="datepicker">Sélectionnez une date :</label>    
@@ -120,19 +120,21 @@
     			$("#datepicker").datepicker();
     		});
   		</script>
-  		</div>
+  		</div>-->
   		
   		<div class="crit">
     	<label for="criticite">Criticite :</label>
-    	<select name="criticite">
-			<c:forEach items="${criticiteListe}" var="criticite">
-				<option value="${criticite.id}">"${criticite.criticite}"</option>
-			</c:forEach>
+    	<select name="id_criticite">
+				<option value="1">NORMAL</option>
+				<option value="2">EN COURS DE COMMANDE</option>
+				<option value="3">CRITIQUE</option>
 		</select>
     	</div>
+    	
+    	<button class="btn_enfer" type="submit">Enregistrer et fermer</button>
     </form>
     	
-    	<button class="btn_enfer" onclick="window.location.href='Inventaire.jsp'">Enregistrer et fermer</button>
+    	
 	
 </div>
 

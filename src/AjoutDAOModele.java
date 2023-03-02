@@ -146,4 +146,73 @@ public class AjoutDAOModele {
         }
         return produit;
     }
+	
+	public int lireQuantite(int code_article)
+    {
+        ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
+        Connection connexion = connexionBDDModele.getConnexion();
+        int quantite=0;
+        try
+        {
+            String requete = new String("SELECT quantite FROM produit WHERE code_article=?;");
+            PreparedStatement statement = connexion.prepareStatement(requete, Statement.RETURN_GENERATED_KEYS);
+            /*statement.setInt(1, id);*/
+            ResultSet rs = statement.executeQuery();
+            
+            while ( rs.next() )
+            {
+				quantite= rs.getInt("quantite");
+            }
+        }
+        catch (SQLException ex3)
+        {
+            while (ex3 != null)
+            {
+                System.out.println(ex3.getSQLState());
+                System.out.println(ex3.getMessage());
+                System.out.println(ex3.getErrorCode());
+                ex3=ex3.getNextException();
+            }
+        }
+        finally
+        {
+            connexionBDDModele.fermerConnexion();
+        }
+        return quantite;
+    }
+	
+	public int modifierQuantite(int quantite, int id_criticite, int code_article)
+    {
+        ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();
+        Connection connexion = connexionBDDModele.getConnexion();
+        int resultat = -1;
+        try        {
+            String requete = new String("UPDATE produit SET quantite = ?, code_article = ?, id_criticite = ? WHERE ID = ?;");
+            PreparedStatement statement = connexion.prepareStatement(requete);
+            statement.setInt(1, quantite);
+            statement.setInt(2, id_criticite);
+            statement.executeUpdate();
+            ResultSet rs = statement.executeQuery();
+            if (rs.next()) {
+                resultat = rs.getInt(1);
+            }
+            else                
+            	resultat = -1;
+        }
+        catch (SQLException ex3)
+        {
+            while (ex3 != null)
+            {
+                System.out.println(ex3.getSQLState());
+                System.out.println(ex3.getMessage());
+                System.out.println(ex3.getErrorCode());
+                ex3=ex3.getNextException();
+            }
+        }
+        finally        
+        {
+            connexionBDDModele.fermerConnexion();
+        }
+        return resultat;
+    }
 }

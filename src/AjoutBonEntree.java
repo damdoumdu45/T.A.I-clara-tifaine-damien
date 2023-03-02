@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class produitsControleur
  */
-@WebServlet("/AjoutControleur")
-public class AjoutControleur extends HttpServlet {
+@WebServlet("/AjoutBonEntree")
+public class AjoutBonEntree extends HttpServlet {
 	private static final long serialVersionUID = 1L; 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AjoutControleur() {
+    public AjoutBonEntree() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,7 +37,7 @@ public class AjoutControleur extends HttpServlet {
 		List<CriticiteBeanModele> criticiteListe = criticiteDAOModele.lireListe();
 		request.setAttribute("criticiteListe", criticiteListe);
 
-		request.getRequestDispatcher("/AjoutVue.jsp").forward(request, response);
+		request.getRequestDispatcher("/AjouterBonEntree.jsp").forward(request, response);
 
 	}
 
@@ -46,32 +46,24 @@ public class AjoutControleur extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String description = request.getParameter("description");
-		String fournisseur = request.getParameter("fournisseur");
+	
 		String code_article = request.getParameter("code_article");
-		String date_de_creation = request.getParameter("date_de_creation");
-		String regle = request.getParameter("regle");
 		String quantite = request.getParameter("quantite");
-		String criticite = request.getParameter("criticite");
+		String id_criticite=request.getParameter("id_criticite");
 		
 		AjoutBeanModele produit= new AjoutBeanModele();
 		AjoutDAOModele ajoutDAOModele = new AjoutDAOModele();
-		CriticiteDAOModele criticiteDAOModele=new CriticiteDAOModele();
-		
-		produit.setDescription(description);
-		produit.setFournisseur(fournisseur);
+	
 		produit.setCode_article(code_article);
-		produit.setDate_de_creation(date_de_creation);
-		produit.setRegle(Integer.parseInt(regle));
 		produit.setQuantite(Integer.parseInt(quantite));
-		System.out.println(criticite);
-		produit.setCriticite(criticiteDAOModele.lire(Integer.parseInt(criticite)));
 		
-		
-		ajoutDAOModele.creer(produit);
+		quantite+= ajoutDAOModele.lireQuantite(Integer.parseInt(code_article));
+		System.out.println(quantite);
+		ajoutDAOModele.modifierQuantite(Integer.parseInt(quantite), Integer.parseInt(id_criticite), Integer.parseInt(code_article));
 
-		request.setAttribute("produit", produit);
-		doGet(request, response);
+		
+		request.getRequestDispatcher("/Accueil.jsp").forward(request, response);
+		
 	}
 
 }
