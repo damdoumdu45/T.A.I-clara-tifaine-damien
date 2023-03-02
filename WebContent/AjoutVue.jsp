@@ -22,7 +22,7 @@
         <a href="#" onclick="window.location.href='Accueil.jsp'">Accueil</a>
     </li>
     <li>
-        <a href="#" onclick="window.location.href='AjoutVue.jsp'">Ajout</a>
+        <a href="#" onclick="window.location.href='AjoutControleur'">Ajout</a>
     </li>
     <li>
         <a href="#" onclick="window.location.href='Inventaire.jsp'">Inventaire</a>
@@ -108,7 +108,7 @@
     	<label for="criticite">Criticite :</label>
     	<select name="criticite">
 			<c:forEach items="${criticiteListe}" var="criticite">
-				<option value="${criticite.id}">${criticite.nom}</option>
+				<option value="${criticite.id}">"${criticite.criticite}"</option>
 			</c:forEach>
 		</select>
     	</div>

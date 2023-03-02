@@ -12,13 +12,13 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class produitsControleur
  */
-@WebServlet("/AjoutControleur")
-public class AjoutControleur extends HttpServlet {
+@WebServlet("/InventaireControleur")
+public class InventaireControleur extends HttpServlet {
 	private static final long serialVersionUID = 1L; 
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public AjoutControleur() {
+    public InventaireControleur() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -37,7 +37,7 @@ public class AjoutControleur extends HttpServlet {
 		List<CriticiteBeanModele> criticiteListe = criticiteDAOModele.lireListe();
 		request.setAttribute("criticiteListe", criticiteListe);
 
-		request.getRequestDispatcher("/AjoutVue.jsp").forward(request, response);
+		request.getRequestDispatcher("/Inventaire.jsp").forward(request, response);
 
 	}
 

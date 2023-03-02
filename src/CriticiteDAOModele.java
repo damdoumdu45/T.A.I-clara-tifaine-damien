@@ -90,6 +90,7 @@ public class CriticiteDAOModele {
 	}
 	
 	// CRUD: obj = read(id)
+	//CriticiteBeanModele
 		public  CriticiteBeanModele lire(int id)
 		{
 			ConnexionBDDModele connexionBDDModele = new ConnexionBDDModele();

@@ -75,13 +75,13 @@
       <td><c:out value="${produit.code_article}" /></td>
       <td><c:out value="${produit.description}" /></td>
       <td><c:out value="${produit.quantite}" /></td>
-      <td><c:forEach items="${criticiteListe}" var="criticité">
-		<option value="${criticite.id}">${role.nom}</option>
-		</c:forEach></td>
+      <td>Criticite<!--<c:forEach items="${criticiteListe}" var="criticite">
+		<option value="${criticite.id}">${criticite.criticite}</option>
+		</c:forEach>--></td>
       <td><c:out value="${produit.regle}" /></td>
-      <td>a voir</td>
+      <td>date du dernier inventaire</td>
       <td><button class="btn-entree" onclick="window.location.href='AjouterBonEntree.jsp'"><b>+</b></button><button class="btn-entree" onclick="window.location.href='AjouterBonSortie.jsp'"><b>-</b></button></td>
-      <td>a voir</td>
+      <td>indice de confiance</td>
     </tr>
     </c:forEach>
   </tbody>
