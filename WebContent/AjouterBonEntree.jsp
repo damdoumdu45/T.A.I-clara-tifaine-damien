@@ -43,6 +43,7 @@
             <li><a href="#"onclick="window.location.href='Historique.jsp'">Historique des entrées/sorties</a></li>
         </ul>
     </li>
+    
      <div class="search">
     	<input type="text" class="search__input" placeholder="Rechercher">
     		<button class="search__button">
@@ -57,9 +58,9 @@
     <li id="settings">
         <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
         <ul class="submenu">
-            <li ><a style="font-size:16px" href="#" onclick="window.location.href='pageConnexion.jsp'" >Déconnexion</a></li>
+            <li ><a style="font-size:16px; transform: translateY(-10px);" href="#" onclick="window.location.href='pageConnexion.jsp'" >Déconnexion</a></li>
         </ul>
-    </li>
+     </li>
     
     <li id="settings">
         <a href="#" onclick="window.location.href='index.html'"><i class="fa-solid fa-bell fa-2xl"></i></a>
@@ -68,7 +69,7 @@
 
 <div class="analytics_graph">
 <table class="table table-striped table-hover">
-  <thead>
+  <thead>b
     <tr>
       <th scope="col">Code article</th>
       <th scope="col">Description</th>

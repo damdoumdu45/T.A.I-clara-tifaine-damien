@@ -47,7 +47,10 @@
 	</div>
     <li id="settings">
         <a href="#"><i class="fa-sharp fa-solid fa-gears fa-2xl"></i></a>
-    </li>
+        <ul class="submenu">
+            <li ><a style="font-size:16px; transform: translateY(-10px);" href="#" onclick="window.location.href='pageConnexion.jsp'" >Déconnexion</a></li>
+        </ul>
+     </li>
     <li id="settings">
         <a href="#" onclick="window.location.href='index.html'"><i class="fa-solid fa-bell fa-2xl"></i></a>
     </li>
